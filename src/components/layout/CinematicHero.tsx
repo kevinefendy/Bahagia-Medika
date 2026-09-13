@@ -272,7 +272,7 @@ export default function CinematicHero() {
           {/* Right Column: 4-Scene Cinematic Video Player */}
           <div className="lg:col-span-6 xl:col-span-5 relative mt-6 lg:mt-0">
             {/* Floating Indonesian Hospital Accreditation Badge */}
-            <div className="hidden sm:flex absolute -top-5 -left-4 z-20 items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-teal-100">
+            <div className="hidden sm:flex absolute -top-5 -left-4 z-20 items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-teal-100 animate-float-slow">
               <div className="w-9 h-9 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5 text-[var(--color-primary)]" />
               </div>
@@ -283,7 +283,7 @@ export default function CinematicHero() {
             </div>
 
             {/* Floating Emergency Response Badge */}
-            <div className="flex absolute -bottom-7 sm:-bottom-8 lg:-bottom-9 left-2 sm:left-4 lg:-left-8 xl:-left-12 z-20 items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-teal-100">
+            <div className="flex absolute -bottom-7 sm:-bottom-8 lg:-bottom-9 left-2 sm:left-4 lg:-left-8 xl:-left-12 z-20 items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-teal-100 animate-float-reverse">
               <div className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
                 <HeartPulse className="w-4 h-4 text-emerald-600" />
               </div>

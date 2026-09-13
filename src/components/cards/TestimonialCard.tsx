@@ -9,13 +9,13 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   const avatar = testimonial.avatarUrl || 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face';
 
   return (
-    <div className="rounded-2xl border border-[var(--color-border)] p-6 bg-white shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+    <div className="rounded-2xl border border-[var(--color-border)] p-6 bg-white smooth-card hover:border-[var(--color-primary)]/40 flex flex-col justify-between">
       <div>
         <div className="flex items-center gap-1 mb-4">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
-              className={`h-4 w-4 ${i < testimonial.rating ? 'fill-[var(--color-warning)] text-[var(--color-warning)]' : 'text-[var(--color-border)]'}`}
+              className={`h-4 w-4 transition-transform duration-200 hover:scale-110 ${i < testimonial.rating ? 'fill-[var(--color-warning)] text-[var(--color-warning)]' : 'text-[var(--color-border)]'}`}
             />
           ))}
         </div>
@@ -28,7 +28,7 @@ export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
         <img
           src={avatar}
           alt={testimonial.patientName}
-          className="w-11 h-11 rounded-full object-cover border border-[var(--color-border)] shadow-2xs shrink-0"
+          className="w-11 h-11 rounded-full object-cover border border-[var(--color-border)] shadow-2xs shrink-0 transition-transform duration-300 hover:scale-105"
         />
         <div className="min-w-0">
           <p className="text-sm font-bold text-[var(--color-text-primary)] truncate">

@@ -78,7 +78,7 @@ export default function Navbar() {
                     <ChevronDown className={cn('h-3.5 w-3.5 transition-transform', openDropdown === item.label && 'rotate-180')} />
                   </button>
                   {openDropdown === item.label && (
-                    <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-[var(--color-border)] rounded-xl shadow-lg py-1.5 z-50">
+                    <div className="absolute top-full left-0 mt-1 w-52 bg-white border border-[var(--color-border)] rounded-xl shadow-lg py-1.5 z-50 animate-scale-in">
                       {item.children.map((child) => (
                         <Link
                           key={child.href}
@@ -205,10 +205,10 @@ export default function Navbar() {
       {isMobileOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity"
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm animate-fade-in"
             onClick={() => setIsMobileOpen(false)}
           />
-          <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl flex flex-col animate-in slide-in-from-left duration-200">
+          <div className="absolute left-0 top-0 h-full w-80 max-w-[85vw] bg-white shadow-2xl flex flex-col animate-slide-in-left">
             <div className="flex items-center justify-between p-4 border-b border-[var(--color-border)]">
               <Logo size="sm" href={null} />
               <button

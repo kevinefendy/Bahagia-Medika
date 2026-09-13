@@ -172,31 +172,35 @@ export default function ChatbotWidget() {
       {!isChatWidgetOpen && (
         <button
           onClick={toggleChatWidget}
-          className="fixed bottom-20 md:bottom-6 right-4 z-50 h-14 w-14 rounded-full bg-[var(--color-primary)] text-white shadow-lg hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center"
+          className="fixed bottom-20 md:bottom-6 right-4 z-50 h-14 w-14 rounded-full bg-[var(--color-primary)] text-white shadow-xl hover:bg-[var(--color-primary-dark)] transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center animate-pulse-ring cursor-pointer group"
+          aria-label="Buka Asisten Medika Care"
         >
-          <MessageCircle className="h-6 w-6" />
+          <MessageCircle className="h-6 w-6 transition-transform duration-200 group-hover:scale-110" />
         </button>
       )}
 
       {/* Chat Widget */}
       {isChatWidgetOpen && (
-        <div className="fixed bottom-0 right-0 md:bottom-6 md:right-4 z-50 w-full md:w-[380px] h-[85vh] md:h-[560px] bg-white md:rounded-xl shadow-2xl flex flex-col">
+        <div className="fixed bottom-0 right-0 md:bottom-6 md:right-4 z-50 w-full md:w-[380px] h-[85vh] md:h-[560px] bg-white md:rounded-2xl shadow-2xl border border-[var(--color-border)] flex flex-col animate-scale-in overflow-hidden">
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-3 border-b border-[var(--color-border)] bg-[var(--color-primary)] text-white rounded-t-xl">
-            <div className="flex items-center gap-2">
+          <div className="flex items-center justify-between px-4 py-3.5 border-b border-[var(--color-border)] bg-[var(--color-primary)] text-white md:rounded-t-2xl">
+            <div className="flex items-center gap-2.5">
               <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
                 <MessageCircle className="h-4 w-4" />
               </div>
               <div>
-                <p className="font-medium text-sm">Medika Care</p>
-                <p className="text-xs text-white/70">Online</p>
+                <p className="font-bold text-sm">Medika Care</p>
+                <p className="text-xs text-teal-200 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Online 24 Jam
+                </p>
               </div>
             </div>
             <div className="flex items-center gap-1">
-              <button onClick={startNewConversation} className="p-1.5 hover:bg-white/10 rounded-lg">
+              <button onClick={startNewConversation} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors cursor-pointer" title="Percakapan Baru">
                 <Plus className="h-4 w-4" />
               </button>
-              <button onClick={toggleChatWidget} className="p-1.5 hover:bg-white/10 rounded-lg">
+              <button onClick={toggleChatWidget} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors cursor-pointer" title="Tutup">
                 <X className="h-4 w-4" />
               </button>
             </div>
@@ -205,17 +209,17 @@ export default function ChatbotWidget() {
           {/* Messages */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {activeConversation?.messages.map((msg) => (
-              <div key={msg.id}>
+              <div key={msg.id} className="animate-fade-in-up">
                 {msg.sender === 'user' ? (
                   <div className="flex justify-end">
-                    <div className="bg-[var(--color-primary)] text-white rounded-2xl rounded-br-sm px-4 py-2 max-w-[80%]">
+                    <div className="bg-[var(--color-primary)] text-white rounded-2xl rounded-br-sm px-4 py-2.5 max-w-[80%] shadow-xs">
                       <p className="text-sm">{msg.text}</p>
                     </div>
                   </div>
                 ) : (
                   <div className="flex flex-col gap-2 max-w-[85%]">
-                    <div className="bg-[var(--color-surface)] rounded-2xl rounded-bl-sm px-4 py-2">
-                      <p className="text-sm text-[var(--color-text-primary)] whitespace-pre-line">{msg.text}</p>
+                    <div className="bg-[var(--color-surface)] rounded-2xl rounded-bl-sm px-4 py-2.5 shadow-xs">
+                      <p className="text-sm text-[var(--color-text-primary)] whitespace-pre-line leading-relaxed">{msg.text}</p>
                     </div>
                     {msg.type === 'doctor-card' && msg.payload?.doctors?.map(d => (
                       <DoctorCardMini key={d.id} doctor={d} />
@@ -224,9 +228,9 @@ export default function ChatbotWidget() {
                       <ServiceCardMini key={s.id} service={s} />
                     ))}
                     {msg.type === 'emergency-card' && (
-                      <div className="border-2 border-[var(--color-error)] rounded-lg p-3">
+                      <div className="border-2 border-[var(--color-error)] rounded-xl p-3 bg-red-50/50">
                         <p className="text-sm font-medium text-[var(--color-error)] mb-2">Apakah Anda membutuhkan bantuan darurat?</p>
-                        <a href="tel:02112349999" className="inline-block px-4 py-2 bg-[var(--color-error)] text-white text-sm font-medium rounded-lg">Hubungi IGD</a>
+                        <a href="tel:02112349999" className="inline-block px-4 py-2 bg-[var(--color-error)] hover:bg-red-700 text-white text-sm font-bold rounded-lg transition-colors">Hubungi IGD</a>
                       </div>
                     )}
                     {msg.quickReplies && (
@@ -235,7 +239,7 @@ export default function ChatbotWidget() {
                           <button
                             key={qr}
                             onClick={() => handleQuickReply(qr)}
-                            className="px-3 py-1.5 text-xs font-medium border border-[var(--color-primary)] text-[var(--color-primary)] rounded-full hover:bg-[var(--color-primary-light)] transition-colors"
+                            className="px-3 py-1.5 text-xs font-medium border border-[var(--color-primary)] text-[var(--color-primary)] rounded-full hover:bg-[var(--color-primary-light)] transition-all duration-200 hover:scale-105 active:scale-95 cursor-pointer"
                           >
                             {qr}
                           </button>
@@ -251,7 +255,7 @@ export default function ChatbotWidget() {
           </div>
 
           {/* Input */}
-          <div className="border-t border-[var(--color-border)] p-3">
+          <div className="border-t border-[var(--color-border)] p-3 bg-slate-50/50">
             <form onSubmit={(e) => { e.preventDefault(); handleSend(); }} className="flex items-center gap-2">
               <input
                 ref={inputRef}
@@ -259,12 +263,12 @@ export default function ChatbotWidget() {
                 placeholder="Ketik pesan..."
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                className="flex-1 px-3 py-2 text-sm border border-[var(--color-border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-30"
+                className="flex-1 px-3.5 py-2 text-sm border border-[var(--color-border)] rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
               />
               <button
                 type="submit"
                 disabled={!input.trim()}
-                className="p-2 bg-[var(--color-primary)] text-white rounded-lg disabled:opacity-40 hover:bg-[var(--color-primary-dark)] transition-colors"
+                className="p-2.5 bg-[var(--color-primary)] text-white rounded-xl disabled:opacity-40 hover:bg-[var(--color-primary-dark)] transition-all active:scale-95 cursor-pointer"
               >
                 <Send className="h-4 w-4" />
               </button>

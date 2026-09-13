@@ -255,7 +255,7 @@ export default function CareTriageGuide() {
       </div>
 
       {/* Expanded Interactive Detail Panel for the Selected Pathway */}
-      <div className="bg-white rounded-3xl border-2 border-[var(--color-primary)]/20 p-6 sm:p-8 lg:p-10 shadow-lg relative overflow-hidden">
+      <div key={activePathway.id} className="bg-white rounded-3xl border-2 border-[var(--color-primary)]/20 p-6 sm:p-8 lg:p-10 shadow-lg relative overflow-hidden animate-fade-in">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-[var(--color-border)]">
           <div className="flex items-start gap-4">
             <div className="w-14 h-14 rounded-2xl bg-[var(--color-primary-light)] text-[var(--color-primary)] flex items-center justify-center shrink-0 shadow-sm border border-[var(--color-secondary)]/20">

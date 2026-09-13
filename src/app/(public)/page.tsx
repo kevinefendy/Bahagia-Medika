@@ -87,27 +87,42 @@ function AnimatedSection({
   delay?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            el.classList.add('animate-fade-in-up');
-            el.style.opacity = '1';
-          }, delay);
+          setIsVisible(true);
           observer.unobserve(el);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
     );
-    el.style.opacity = '0';
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay]);
+  }, []);
+
   return (
-    <div ref={ref} className={className}>
+    <div
+      ref={ref}
+      className={className}
+      style={{
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translate3d(0, 0, 0)' : 'translate3d(0, 24px, 0)',
+        transition: `opacity 700ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms, transform 700ms cubic-bezier(0.16, 1, 0.3, 1) ${delay}ms`,
+        willChange: isVisible ? 'auto' : 'opacity, transform',
+      }}
+    >
       {children}
     </div>
   );
@@ -190,7 +205,7 @@ export default function HomePage() {
       <CentersOfExcellence />
 
       {/* 5. Tim Dokter Spesialis Konsultan */}
-      <section className="bg-white border-y border-[var(--color-border)] py-16 sm:py-24">
+      <AnimatedSection className="bg-white border-y border-[var(--color-border)] py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
@@ -221,7 +236,7 @@ export default function HomePage() {
               : doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* 6. Layanan Medis Terpadu */}
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24" delay={50}>
@@ -256,17 +271,19 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* 7. Transparansi Pasien: Kalkulator Biaya & Ketersediaan Kamar */}
-      <div className="bg-gradient-to-b from-white via-slate-50 to-white py-10 border-y border-[var(--color-border)]">
+      <AnimatedSection className="bg-gradient-to-b from-white via-slate-50 to-white py-10 border-y border-[var(--color-border)]">
         <TreatmentCostEstimator />
         <BillingAndInsuranceSection />
         <LiveBedTracker />
-      </div>
+      </AnimatedSection>
 
       {/* 8. Fasilitas Rumah Sakit Modern */}
-      <FacilitiesPreviewSection />
+      <AnimatedSection>
+        <FacilitiesPreviewSection />
+      </AnimatedSection>
 
       {/* 9. Standar Tata Kelola Klinis & Mutu Rumah Sakit (Replacing generic AI Why Choose Us) */}
-      <section className="bg-[var(--color-primary)] text-white py-16 sm:py-24">
+      <AnimatedSection className="bg-[var(--color-primary)] text-white py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#98D2E1] block mb-2">
@@ -317,7 +334,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* 10. Tentang Rumah Sakit & Kampus Medis */}
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24" delay={100}>
@@ -445,7 +462,7 @@ export default function HomePage() {
       </AnimatedSection>
 
       {/* 13. Edukasi & Publikasi Medis Terkini */}
-      <section className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
+      <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
@@ -473,10 +490,10 @@ export default function HomePage() {
             ? Array.from({ length: 3 }).map((_, i) => <CardSkeleton key={i} />)
             : articles.map((article) => <ArticleCard key={article.id} article={article} />)}
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* 14. Berita & Informasi Rumah Sakit */}
-      <section className="bg-white border-t border-[var(--color-border)] py-16 sm:py-24">
+      <AnimatedSection className="bg-white border-t border-[var(--color-border)] py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
@@ -506,10 +523,10 @@ export default function HomePage() {
               : news.map((item) => <NewsCard key={item.id} news={item} />)}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* 15. Emergency Hotline & Evakuasi Medis Strip */}
-      <section className="relative bg-gradient-to-r from-rose-700 via-rose-800 to-[#18313D] text-white py-14 overflow-hidden">
+      <AnimatedSection className="relative bg-gradient-to-r from-rose-700 via-rose-800 to-[#18313D] text-white py-14 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="space-y-2 max-w-2xl text-center md:text-left">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-xs font-bold uppercase tracking-wider text-rose-100">
@@ -540,10 +557,10 @@ export default function HomePage() {
             </a>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* 16. Kampus Medis, Lokasi & Akses Pasien */}
-      <section className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
+      <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
             Lokasi & Akses
@@ -614,7 +631,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </div>
   );
 }

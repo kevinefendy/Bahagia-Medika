@@ -72,39 +72,50 @@ export default function DoctorCard({ doctor, variant = 'default', isSelected, on
   }
 
   return (
-    <div className="rounded-xl border border-[var(--color-border)] overflow-hidden hover:shadow-md transition-all bg-white">
-      <div className="h-48 bg-[var(--color-surface)] overflow-hidden">
-        {doctor.photoUrl ? (
-          <img src={doctor.photoUrl} alt={doctor.name} className="h-full w-full object-cover" />
-        ) : (
-          <div className="h-full w-full flex items-center justify-center bg-[var(--color-primary-light)]">
-            <span className="text-[var(--color-primary)] font-bold text-4xl">
-              {doctor.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-            </span>
-          </div>
-        )}
-      </div>
-      <div className="p-4">
-        <h3 className="font-semibold text-[var(--color-text-primary)] truncate">{doctor.name}</h3>
-        <p className="text-sm text-[var(--color-primary)]">{doctor.specializationName}</p>
-        <div className="flex items-center gap-2 mt-2 text-sm text-[var(--color-text-secondary)]">
-          <MapPin className="h-4 w-4 shrink-0" />
-          <span className="truncate">{doctor.location}</span>
+    <div className="group rounded-2xl border border-[var(--color-border)] overflow-hidden bg-white smooth-card hover:border-[var(--color-primary)]/40 flex flex-col justify-between">
+      <div>
+        <div className="h-52 bg-[var(--color-surface)] overflow-hidden relative">
+          {doctor.photoUrl ? (
+            <img
+              src={doctor.photoUrl}
+              alt={doctor.name}
+              className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+            />
+          ) : (
+            <div className="h-full w-full flex items-center justify-center bg-[var(--color-primary-light)]">
+              <span className="text-[var(--color-primary)] font-bold text-4xl">
+                {doctor.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+              </span>
+            </div>
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-300" />
         </div>
-        {doctor.schedules.length > 0 && (
-          <div className="flex items-center gap-2 mt-1 text-sm text-[var(--color-text-secondary)]">
-            <Calendar className="h-4 w-4 shrink-0" />
-            <span>{doctor.schedules.map(s => s.day).join(', ')}</span>
+        <div className="p-4 sm:p-5">
+          <h3 className="font-bold text-base text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors duration-200 truncate">
+            {doctor.name}
+          </h3>
+          <p className="text-xs sm:text-sm font-medium text-[var(--color-primary)] mt-0.5">{doctor.specializationName}</p>
+          <div className="flex items-center gap-2 mt-2.5 text-xs text-[var(--color-text-secondary)]">
+            <MapPin className="h-3.5 w-3.5 shrink-0 text-gray-400" />
+            <span className="truncate">{doctor.location}</span>
           </div>
-        )}
-        <div className="flex gap-2 mt-4">
+          {doctor.schedules.length > 0 && (
+            <div className="flex items-center gap-2 mt-1.5 text-xs text-[var(--color-text-secondary)]">
+              <Calendar className="h-3.5 w-3.5 shrink-0 text-gray-400" />
+              <span className="truncate">{doctor.schedules.map(s => s.day).join(', ')}</span>
+            </div>
+          )}
+        </div>
+      </div>
+      <div className="p-4 sm:p-5 pt-0">
+        <div className="flex gap-2 pt-3 border-t border-[var(--color-border)]/50">
           <Link href={`/dokter/${doctor.slug}`} className="flex-1">
-            <Button variant="outline" size="sm" className="w-full">
+            <Button variant="outline" size="sm" className="w-full text-xs">
               Lihat Profil
             </Button>
           </Link>
           <Link href={`/buat-janji?doctorId=${doctor.id}`} className="flex-1">
-            <Button variant="primary" size="sm" className="w-full">
+            <Button variant="primary" size="sm" className="w-full text-xs">
               Buat Janji
             </Button>
           </Link>

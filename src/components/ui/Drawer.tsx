@@ -28,13 +28,13 @@ export default function Drawer({ isOpen, onClose, children, side = 'right', titl
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-50 bg-black/50"
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs animate-fade-in"
       onClick={(e) => e.target === overlayRef.current && onClose()}
     >
       <div
         className={cn(
-          'fixed inset-y-0 w-full max-w-sm bg-white shadow-xl transition-transform duration-300',
-          side === 'right' ? 'right-0 translate-x-0' : 'left-0 -translate-x-0'
+          'fixed inset-y-0 w-full max-w-sm bg-white shadow-2xl z-10 flex flex-col',
+          side === 'right' ? 'right-0 animate-slide-in-right' : 'left-0 animate-slide-in-left'
         )}
       >
         <div className="flex items-center justify-between px-4 py-4 border-b border-[var(--color-border)]">

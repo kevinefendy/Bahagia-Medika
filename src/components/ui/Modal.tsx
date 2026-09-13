@@ -44,13 +44,13 @@ export default function Modal({ isOpen, onClose, title, children, size = 'md' }:
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-fade-in"
       onClick={(e) => e.target === overlayRef.current && onClose()}
     >
       <div
         ref={contentRef}
         className={cn(
-          'w-full max-h-[90dvh] flex flex-col rounded-2xl bg-white shadow-2xl animate-in zoom-in-95 duration-200 overflow-hidden',
+          'w-full max-h-[90dvh] flex flex-col rounded-2xl bg-white shadow-2xl animate-scale-in overflow-hidden border border-gray-100',
           sizes[size]
         )}
         role="dialog"
