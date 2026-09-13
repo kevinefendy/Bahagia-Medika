@@ -78,7 +78,7 @@ export default function Sidebar() {
           </div>
           <div className="flex justify-between items-center text-[11px]">
             <span className="text-gray-500">No. RM:</span>
-            <span className="font-mono font-bold text-gray-800">{medicalRecord.rmNumber}</span>
+            <span className="font-bold text-gray-800">{medicalRecord.rmNumber}</span>
           </div>
           <div className="flex justify-between items-center text-[11px]">
             <span className="text-gray-500">Gol. Darah:</span>

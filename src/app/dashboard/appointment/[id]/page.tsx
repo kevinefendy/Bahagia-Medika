@@ -7,12 +7,7 @@ import {
   Clock,
   MapPin,
   Printer,
-  ShieldCheck,
   AlertCircle,
-  FileText,
-  User,
-  Ticket,
-  QrCode,
   CheckCircle2,
 } from 'lucide-react';
 import Button from '@/components/ui/Button';
@@ -74,6 +69,7 @@ export default function AppointmentDetailPage() {
 
   const canModify =
     (appointment.status === 'Confirmed' || appointment.status === 'Pending') &&
+    // eslint-disable-next-line react-hooks/purity
     new Date(appointment.date) >= new Date(Date.now() - 86400000);
 
   return (
@@ -132,8 +128,8 @@ export default function AppointmentDetailPage() {
               </div>
 
               <div className="bg-white p-3 rounded-xl border border-teal-200 text-center shrink-0">
-                <p className="font-mono text-xs font-bold text-gray-500">KODE BOOKING</p>
-                <p className="font-mono text-xl font-black text-[var(--color-primary)] tracking-wider">
+                <p className="text-xs font-bold text-gray-500">KODE BOOKING</p>
+                <p className="text-xl font-black text-[var(--color-primary)] tracking-wider">
                   {appointment.id}
                 </p>
                 {/* Barcode visual */}

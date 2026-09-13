@@ -1,7 +1,7 @@
 [
   {
     "id": "doc-001", "slug": "dr-amelia-putri", "name": "Dr. Amelia Putri, Sp.An",
-    "photoUrl": "https://images.unsplash.com/photo-1584467735815-f778f274e296?w=400&h=400&fit=crop&crop=face",
+    "photoUrl": "/images/doctors/dr-amelia-putri.jpg",
     "specializationId": "sp-001", "specializationName": "Anak",
     "education": ["FK Universitas Indonesia", "Sp.A - FKUI"],
     "experienceYears": 12, "languages": ["Bahasa Indonesia", "English"],
@@ -116,7 +116,7 @@
   },
   {
     "id": "doc-009", "slug": "dr-maya-kusuma", "name": "Dr. Maya Kusuma, Sp.S",
-    "photoUrl": "https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=400&fit=crop&crop=face",
+    "photoUrl": "/images/doctors/dr-maya-kusuma.jpg",
     "specializationId": "sp-008", "specializationName": "Syaraf",
     "education": ["FK Universitas Indonesia", "Sp.S - FKUI"],
     "experienceYears": 13, "languages": ["Bahasa Indonesia", "English"],
@@ -161,7 +161,7 @@
   },
   {
     "id": "doc-012", "slug": "dr-ahmad-fauzi", "name": "Dr. Ahmad Fauzi, Sp.GIGA",
-    "photoUrl": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
+    "photoUrl": "/images/doctors/dr-ahmad-fauzi.jpg",
     "specializationId": "sp-006", "specializationName": "Gigi & Mulut",
     "education": ["FKG Universitas Padjadjaran", "Sp.GIGA - FKG UI"],
     "experienceYears": 10, "languages": ["Bahasa Indonesia", "English"],

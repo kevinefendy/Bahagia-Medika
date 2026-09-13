@@ -7,17 +7,14 @@ import {
   Phone,
   CreditCard,
   AlertTriangle,
-  CheckCircle,
   Save,
   Edit3,
-  Calendar,
-  MapPin,
-  Mail,
   UserCheck,
 } from 'lucide-react';
 import { useAuthStore } from '@/lib/store/useAuthStore';
 import { useProfileStore } from '@/lib/store/useProfileStore';
 import { usePatientRecordStore } from '@/lib/store/usePatientRecordStore';
+import type { PatientMedicalRecord } from '@/types/patientRecord';
 import { useUIStore } from '@/lib/store/useUIStore';
 import Input from '@/components/ui/Input';
 import Button from '@/components/ui/Button';
@@ -71,7 +68,7 @@ export default function ProfilePage() {
     });
 
     updateMedicalRecord({
-      bloodType: form.bloodType as any,
+      bloodType: form.bloodType as PatientMedicalRecord['bloodType'],
       allergies: {
         medications: form.medicationAllergies.split(',').map((s) => s.trim()).filter(Boolean),
         foods: form.foodAllergies.split(',').map((s) => s.trim()).filter(Boolean),
@@ -114,7 +111,7 @@ export default function ProfilePage() {
                 </span>
               </div>
               <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
-                No. Rekam Medis (RM): <strong className="font-mono text-gray-800">{medicalRecord.rmNumber}</strong> &bull; NIK: <strong className="font-mono text-gray-800">{medicalRecord.nik}</strong>
+                No. Rekam Medis (RM): <strong className="text-gray-800">{medicalRecord.rmNumber}</strong> &bull; NIK: <strong className="text-gray-800">{medicalRecord.nik}</strong>
               </p>
             </div>
           </div>
@@ -233,7 +230,7 @@ export default function ProfilePage() {
                   </label>
                   <select
                     value={form.bloodType}
-                    onChange={(e) => setForm({ ...form, bloodType: e.target.value as any })}
+                    onChange={(e) => setForm({ ...form, bloodType: e.target.value as PatientMedicalRecord['bloodType'] })}
                     className="w-full px-3 py-2 text-xs rounded-lg border border-[var(--color-border)] bg-white focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
                   >
                     <option value="A+">A+</option>
@@ -343,7 +340,7 @@ export default function ProfilePage() {
                 </div>
                 <div>
                   <span className="text-gray-500 block mb-0.5">Nomor Handphone:</span>
-                  <span className="font-mono font-bold text-sm text-gray-900">{form.emergencyPhone}</span>
+                  <span className="font-bold text-sm text-gray-900">{form.emergencyPhone}</span>
                 </div>
               </div>
             )}
@@ -394,7 +391,7 @@ export default function ProfilePage() {
                   </div>
                   <div>
                     <span className="text-gray-500 block">Nomor Kartu / Polis:</span>
-                    <span className="font-mono font-bold text-[var(--color-primary)]">{form.insuranceCardNumber}</span>
+                    <span className="font-bold text-[var(--color-primary)]">{form.insuranceCardNumber}</span>
                   </div>
                   <div className="sm:col-span-2">
                     <span className="text-gray-500 block">Hak Kelas Rawat:</span>

@@ -1,25 +1,16 @@
 'use client';
-import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
   Calendar,
-  Search,
   MessageCircle,
   Clock,
   Bell,
   FileText,
   Pill,
-  QrCode,
   HeartPulse,
   PhoneCall,
-  CheckCircle2,
-  AlertCircle,
-  ExternalLink,
   ChevronRight,
-  ShieldCheck,
-  Stethoscope,
-  Activity,
   ArrowUpRight,
 } from 'lucide-react';
 import { useAuthStore } from '@/lib/store/useAuthStore';
@@ -49,6 +40,7 @@ export default function DashboardOverviewPage() {
       (a) =>
         (a.patientId === patientId || a.patientId === user?.id) &&
         (a.status === 'Confirmed' || a.status === 'Pending') &&
+        // eslint-disable-next-line react-hooks/purity
         new Date(a.date) >= new Date(Date.now() - 86400000)
     )
     .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
@@ -117,7 +109,7 @@ export default function DashboardOverviewPage() {
             Selamat Datang, {user?.name || 'Kevin Santoso'}
           </h1>
           <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
-            No. Rekam Medis: <strong className="font-mono text-gray-900">{medicalRecord.rmNumber}</strong> &bull; Faskes Utama: <strong className="text-gray-900">RS Bahagia Medika Jakarta</strong>
+            No. Rekam Medis: <strong className="text-gray-900">{medicalRecord.rmNumber}</strong> &bull; Faskes Utama: <strong className="text-gray-900">RS Bahagia Medika Jakarta</strong>
           </p>
         </div>
 

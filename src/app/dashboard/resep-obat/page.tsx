@@ -202,7 +202,7 @@ export default function ResepObatPage() {
               {/* Left Column: Details */}
               <div className="lg:col-span-8 space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="font-mono text-xs font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
+                  <span className="text-xs font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
                     {item.code}
                   </span>
                   <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-teal-50 text-[var(--color-primary)]">

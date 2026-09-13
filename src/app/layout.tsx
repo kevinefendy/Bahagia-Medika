@@ -4,6 +4,7 @@ import './globals.css';
 import ChatbotWidget from '@/components/chat/ChatbotWidget';
 import ToastContainer from '@/components/ui/Toast';
 import BrowserErrorFilter from '@/components/common/BrowserErrorFilter';
+import CookieConsent from '@/components/common/CookieConsent';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -37,11 +38,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id" className={poppins.variable}>
-      <body className={`${poppins.className} antialiased`}>
+    <html
+      lang="id"
+      className={poppins.variable}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
+    >
+      <body className={`${poppins.className} antialiased`} suppressHydrationWarning>
         <BrowserErrorFilter />
         {children}
         <ChatbotWidget />
+        <CookieConsent />
         <ToastContainer />
       </body>
     </html>

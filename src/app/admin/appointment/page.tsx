@@ -60,7 +60,7 @@ export default function AdminAppointmentPage() {
             <tbody>
               {filtered.map(a => (
                 <tr key={a.id} className="border-t border-[var(--color-border)]">
-                  <td className="px-4 py-3 font-mono text-xs">{a.id}</td>
+                  <td className="px-4 py-3 font-medium text-xs">{a.id}</td>
                   <td className="px-4 py-3">{a.patient.fullName}</td>
                   <td className="px-4 py-3">{a.doctorName}</td>
                   <td className="px-4 py-3">{a.serviceName}</td>

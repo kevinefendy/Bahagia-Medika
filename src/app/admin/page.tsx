@@ -47,7 +47,7 @@ export default function AdminOverviewPage() {
             <tbody>
               {appointments.slice(0, 5).map(a => (
                 <tr key={a.id} className="border-t border-[var(--color-border)]">
-                  <td className="px-4 py-2 font-mono text-xs">{a.id}</td>
+                  <td className="px-4 py-2 font-medium text-xs">{a.id}</td>
                   <td className="px-4 py-2">{a.patient.fullName}</td>
                   <td className="px-4 py-2">{a.doctorName}</td>
                   <td className="px-4 py-2">{a.date}</td>

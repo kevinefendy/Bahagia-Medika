@@ -134,7 +134,7 @@ export default function HealthVitalsBar() {
               </div>
 
               <div className="space-y-1">
-                <p className="text-lg font-black text-[var(--color-text-primary)] font-mono tracking-tight">
+                <p className="text-lg font-black text-[var(--color-text-primary)] tracking-tight">
                   {m.value}
                 </p>
 

@@ -120,7 +120,7 @@ export default function HasilLabPage() {
                     <h3 className="font-bold text-base text-[var(--color-text-primary)] mt-1.5 leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-[var(--color-text-secondary)] font-mono mt-0.5">
+                    <p className="text-xs text-[var(--color-text-secondary)] mt-0.5">
                       {item.testCode}
                     </p>
                   </div>
@@ -161,7 +161,7 @@ export default function HasilLabPage() {
                     {item.parameters.slice(0, 4).map((p, idx) => (
                       <div key={idx} className="flex items-center justify-between bg-white px-2 py-1 rounded border border-gray-100">
                         <span className="text-gray-600 truncate max-w-[90px]">{p.parameter}:</span>
-                        <span className="font-mono font-bold text-gray-900">{p.value} {p.unit}</span>
+                        <span className="font-bold text-gray-900">{p.value} {p.unit}</span>
                       </div>
                     ))}
                   </div>
@@ -217,7 +217,7 @@ export default function HasilLabPage() {
                   </p>
                 </div>
                 <div className="text-right">
-                  <span className="font-mono text-[11px] font-bold text-gray-700 bg-gray-100 px-2 py-1 rounded">
+                  <span className="text-[11px] font-bold text-gray-700 bg-gray-100 px-2 py-1 rounded">
                     {selectedResult.testCode}
                   </span>
                   <p className="text-[10px] text-emerald-600 font-bold mt-1">STATUS: TERVERIFIKASI</p>
@@ -232,7 +232,7 @@ export default function HasilLabPage() {
                 </div>
                 <div>
                   <span className="text-gray-500 block">No. Rekam Medis:</span>
-                  <span className="font-mono font-bold text-[var(--color-primary)]">{medicalRecord.rmNumber}</span>
+                  <span className="font-bold text-[var(--color-primary)]">{medicalRecord.rmNumber}</span>
                 </div>
                 <div>
                   <span className="text-gray-500 block">Tanggal Pemeriksaan:</span>
@@ -265,7 +265,7 @@ export default function HasilLabPage() {
                     {selectedResult.parameters.map((param, i) => (
                       <tr key={i} className="hover:bg-teal-50/20">
                         <td className="p-2.5 font-semibold text-gray-800">{param.parameter}</td>
-                        <td className="p-2.5 font-mono font-bold text-gray-900">{param.value}</td>
+                        <td className="p-2.5 font-bold text-gray-900">{param.value}</td>
                         <td className="p-2.5 text-gray-500">{param.unit || '-'}</td>
                         <td className="p-2.5 text-gray-600">{param.normalRange}</td>
                         <td className="p-2.5 text-center">

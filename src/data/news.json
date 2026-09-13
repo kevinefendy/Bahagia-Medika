@@ -27,12 +27,12 @@
     "isPublished": true
   },
   {
-    "id": "news-004", "slug": "kerjasama-with-university",
-    "title": "Kerja Sama dengan Fakultas Kedokteran UI",
-    "type": "kerja-sama",
+    "id": "news-004", "slug": "fasilitas-radiologi-ct-scan-mutakhir",
+    "title": "Pembaruan Fasilitas CT-Scan & Radiologi Presisi",
+    "type": "prestasi",
     "publishedAt": "2026-07-20",
-    "featuredImage": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=400&fit=crop",
-    "content": "Bahagia Medika menandatangani nota kesepahaman dengan Fakultas Kerja Sama strategis ini bertujuan untuk pengembangan pendidikan kedokteran dan penelitian kesehatan.",
+    "featuredImage": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=400&fit=crop",
+    "content": "RS Bahagia Medika menghadirkan pembaruan instalasi CT-Scan 128-Slice generasi terkini untuk mempercepat diagnosis darurat stroke, kardiovaskular, dan trauma bedah dengan tingkat radiasi minimal.",
     "isPublished": true
   }
 ]

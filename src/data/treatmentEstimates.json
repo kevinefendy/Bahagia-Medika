@@ -73,5 +73,20 @@
       "kelas1": { "room": "Kelas 1", "total": 6800000, "breakdown": { "doctor": 2400000, "room": 2250000, "meds": 1650000, "admin": 500000 } },
       "kelas2": { "room": "Kelas 2", "total": 4800000, "breakdown": { "doctor": 1800000, "room": 1350000, "meds": 1250000, "admin": 400000 } }
     }
+  },
+  {
+    "id": "proc-006",
+    "name": "Kateterisasi Jantung & Stent (PCI)",
+    "category": "Jantung & Pembuluh Darah",
+    "description": "Pelebaran sumbatan arteri koroner dengan kateterisasi dan pemasangan stent bersalut obat (Drug-Eluting Stent) di ruang Cath Lab terakreditasi.",
+    "lengthOfStay": "2 Hari 1 Malam",
+    "bpjsCovered": true,
+    "bpjsNote": "Ditanggung penuh BPJS Kesehatan sesuai indikasi medis kardiologi rujukan.",
+    "packages": {
+      "vvip": { "room": "VVIP Suite", "total": 45000000, "breakdown": { "doctor": 22000000, "room": 5000000, "meds": 15000000, "admin": 3000000 } },
+      "vip": { "room": "VIP Deluxe", "total": 35000000, "breakdown": { "doctor": 18000000, "room": 2900000, "meds": 12100000, "admin": 2000000 } },
+      "kelas1": { "room": "Kelas 1", "total": 26000000, "breakdown": { "doctor": 14000000, "room": 1500000, "meds": 9000000, "admin": 1500000 } },
+      "kelas2": { "room": "Kelas 2", "total": 19500000, "breakdown": { "doctor": 11000000, "room": 900000, "meds": 6600000, "admin": 1000000 } }
+    }
   }
 ]

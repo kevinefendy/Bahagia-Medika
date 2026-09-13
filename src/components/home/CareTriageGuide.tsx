@@ -10,11 +10,9 @@ import {
   PhoneCall,
   ArrowRight,
   Clock,
-  Sparkles,
   CheckCircle2,
   ChevronRight,
   Activity,
-  Heart,
   Zap,
 } from 'lucide-react';
 
@@ -160,31 +158,15 @@ export default function CareTriageGuide() {
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 py-16 sm:py-24">
-      {/* Header Baru dengan Hook yang Menarik & Tidak Klise */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
+      {/* Header Baru */}
+      <div className="mb-10">
         <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-primary-light)] border border-[var(--color-secondary)]/30 text-xs font-semibold text-[var(--color-primary)] mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-[var(--color-primary)]" />
-            <span>Smart Care Pathway Navigator</span>
-          </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--color-text-primary)] tracking-tight leading-tight">
-            Beda Kebutuhan, Beda Penanganan.
-            <span className="block text-[var(--color-primary)]">
-              Akses Jalur Medis Tepat Tanpa Ragu.
-            </span>
+            Panduan Jalur Layanan Medis
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
-            Setiap detik sangat berharga bagi pemulihan Anda. Mulai dari tindakan kegawatdaruratan 24 jam hingga pemeriksaan spesialis terencana, pilih jalur perawatan yang paling mencerminkan kondisi Anda saat ini.
+          <p className="mt-2 text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
+            Pilih jalur perawatan yang sesuai kebutuhan klinis Anda untuk penanganan cepat, terarah, dan optimal.
           </p>
-        </div>
-
-        {/* Indikator Status Cepat */}
-        <div className="flex items-center gap-3 p-3 rounded-2xl bg-white border border-[var(--color-border)] shadow-xs">
-          <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
-          <div className="text-xs">
-            <p className="font-bold text-[var(--color-text-primary)]">Seluruh Jalur Klinis Siaga</p>
-            <p className="text-[var(--color-text-secondary)]">IGD, Poliklinik & Tele-Konsultasi Aktif</p>
-          </div>
         </div>
       </div>
 
@@ -199,7 +181,7 @@ export default function CareTriageGuide() {
               key={pathway.id}
               type="button"
               onClick={() => setActivePathwayId(pathway.id)}
-              className={`text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden flex flex-col justify-between cursor-pointer ${
+              className={`text-left p-5 rounded-2xl border transition-all duration-300 relative overflow-hidden flex flex-col justify-between h-full cursor-pointer ${
                 isSelected
                   ? 'bg-white border-2 border-[var(--color-primary)] shadow-lg ring-4 ring-[var(--color-primary)]/10 -translate-y-1'
                   : 'bg-white/70 hover:bg-white border-[var(--color-border)] hover:border-[var(--color-primary)]/40 hover:shadow-md'
@@ -210,15 +192,6 @@ export default function CareTriageGuide() {
               )}
 
               <div>
-                <div className="flex items-center justify-between gap-2 mb-3">
-                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${pathway.badgeColor}`}>
-                    {pathway.category}
-                  </span>
-                  <span className="text-[10px] font-semibold text-[var(--color-text-secondary)]">
-                    {pathway.turnaroundTime}
-                  </span>
-                </div>
-
                 <div className="flex items-center gap-3 mb-3">
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-transform ${
@@ -229,12 +202,12 @@ export default function CareTriageGuide() {
                   >
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-sm sm:text-base font-bold text-[var(--color-text-primary)] leading-snug">
+                  <h3 className="text-sm sm:text-base font-bold text-[var(--color-text-primary)] leading-snug min-h-[44px] flex items-center">
                     {pathway.title}
                   </h3>
                 </div>
 
-                <p className="text-xs text-[var(--color-text-secondary)] line-clamp-2 leading-relaxed">
+                <p className="text-xs text-[var(--color-text-secondary)] line-clamp-2 leading-relaxed min-h-[36px]">
                   {pathway.summary}
                 </p>
               </div>
@@ -262,13 +235,8 @@ export default function CareTriageGuide() {
               <activePathway.icon className="w-7 h-7" />
             </div>
             <div>
-              <div className="flex items-center gap-2 flex-wrap mb-1">
-                <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border ${activePathway.badgeColor}`}>
-                  {activePathway.badge}
-                </span>
-                <span className="text-xs font-medium text-[var(--color-text-secondary)] flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5" /> Waktu Tanggap: <strong className="text-[var(--color-text-primary)]">{activePathway.turnaroundTime}</strong>
-                </span>
+              <div className="flex items-center gap-2 flex-wrap mb-1 text-xs font-medium text-[var(--color-text-secondary)]">
+                <Clock className="w-3.5 h-3.5" /> Waktu Tanggap: <strong className="text-[var(--color-text-primary)]">{activePathway.turnaroundTime}</strong>
               </div>
               <h3 className="text-xl sm:text-2xl font-black text-[var(--color-text-primary)]">
                 {activePathway.title}

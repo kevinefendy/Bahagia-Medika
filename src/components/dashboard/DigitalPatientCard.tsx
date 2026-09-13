@@ -57,7 +57,7 @@ export default function DigitalPatientCard() {
             <p className="text-lg font-bold text-white tracking-tight truncate">{patientName}</p>
             <div className="flex items-center gap-2 mt-1">
               <span className="text-xs text-white/70">Gol. Darah:</span>
-              <span className="text-xs font-bold px-2 py-0.5 rounded bg-white/20 text-white font-mono">
+              <span className="text-xs font-bold px-2 py-0.5 rounded bg-white/20 text-white">
                 {bloodType}
               </span>
               <span className="text-xs text-white/60">|</span>
@@ -68,7 +68,7 @@ export default function DigitalPatientCard() {
           <div className="sm:text-right flex flex-col justify-end">
             <p className="text-xs text-white/70">Nomor Rekam Medis (No. RM)</p>
             <div className="flex items-center sm:justify-end gap-1.5 mt-0.5">
-              <span className="font-mono text-base font-extrabold tracking-wider text-white">
+              <span className="text-base font-extrabold tracking-wider text-white">
                 {rmNumber}
               </span>
               <button
@@ -165,7 +165,7 @@ export default function DigitalPatientCard() {
                   <div key={i} className="bg-slate-800" style={{ width: `${w * 2}px` }} />
                 ))}
               </div>
-              <p className="font-mono text-xs font-bold text-slate-700 tracking-wider mt-1">{rmNumber}</p>
+              <p className="text-xs font-bold text-slate-700 tracking-wider mt-1">{rmNumber}</p>
             </div>
           </div>
 
@@ -176,7 +176,7 @@ export default function DigitalPatientCard() {
             </div>
             <div className="flex justify-between">
               <span className="text-[var(--color-text-secondary)]">No. Rekam Medis:</span>
-              <span className="font-mono font-bold text-[var(--color-primary)]">{rmNumber}</span>
+              <span className="font-bold text-[var(--color-primary)]">{rmNumber}</span>
             </div>
             <div className="flex justify-between">
               <span className="text-[var(--color-text-secondary)]">Penjamin:</span>

@@ -14,6 +14,8 @@ export interface ChatMessage {
     doctors?: Doctor[];
     services?: Service[];
     schedule?: { day: string; slots: string[] };
+    triageLevel?: 'CITO' | 'URGENT' | 'ROUTINE' | 'INFO';
+    triageTitle?: string;
   };
   quickReplies?: string[];
   timestamp: string;

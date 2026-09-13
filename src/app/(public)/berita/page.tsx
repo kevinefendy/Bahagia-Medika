@@ -25,17 +25,17 @@ export default function BeritaPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-2xl md:text-3xl font-bold text-[var(--color-text-primary)] mb-2">Berita</h1>
-      <p className="text-[var(--color-text-secondary)] mb-6">Informasi terkini dari Bahagia Medika</p>
-      <div className="flex flex-wrap gap-2 mb-6">
+      <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">Berita & Pengumuman</h1>
+      <p className="text-slate-500 mb-8 max-w-2xl">Pembaruan kegiatan medis, program layanan, dan informasi resmi RS Bahagia Medika</p>
+      <div className="flex flex-wrap gap-2 mb-8">
         {TYPES.map(t => (
           <button key={t} onClick={() => { setType(t); setPage(1); }}
-            className={cn('px-3 py-1.5 rounded-full text-sm border transition-colors',
-              type === t ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-primary)]'
+            className={cn('px-4 py-2 rounded-full text-sm border transition-colors cursor-pointer',
+              type === t ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)] font-semibold' : 'border-[var(--color-border)] text-[var(--color-text-secondary)] hover:border-[var(--color-primary)] bg-white'
             )}>{t}</button>
         ))}
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {paginated.map(n => <NewsCard key={n.id} news={n} />)}
       </div>
       <Pagination currentPage={page} totalPages={totalPages} onPageChange={setPage} />

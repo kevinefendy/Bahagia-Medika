@@ -50,11 +50,11 @@ export default function TodayQueueBanner() {
             </div>
             <div>
               <p className="text-[11px] font-medium text-[var(--color-text-secondary)] uppercase">Nomor Antrean Anda</p>
-              <p className="text-2xl font-black text-[var(--color-primary)] font-mono leading-none tracking-tight">
+              <p className="text-2xl font-black text-[var(--color-primary)] leading-none tracking-tight">
                 {activeQueue.ticketNumber}
               </p>
               <p className="text-[11px] font-semibold text-emerald-600 mt-1">
-                Dipanggil saat ini: <span className="font-mono font-bold text-gray-900">{activeQueue.currentCallingNumber}</span>
+                Dipanggil saat ini: <span className="font-bold text-gray-900">{activeQueue.currentCallingNumber}</span>
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function TodayQueueBanner() {
 
             <div className="my-4 py-3 border-y border-dashed border-gray-300">
               <span className="text-xs text-gray-500 font-medium">NOMOR ANTREAN</span>
-              <p className="text-4xl font-black text-[var(--color-primary)] font-mono tracking-tight">
+              <p className="text-4xl font-black text-[var(--color-primary)] tracking-tight">
                 {activeQueue.ticketNumber}
               </p>
               <p className="text-xs font-semibold text-emerald-700 mt-1">
@@ -216,7 +216,7 @@ export default function TodayQueueBanner() {
                   <div key={i} className="bg-gray-800" style={{ width: `${w * 2}px` }} />
                 ))}
               </div>
-              <span className="font-mono text-[10px] text-gray-500 tracking-widest mt-1">
+              <span className="text-[10px] text-gray-500 tracking-widest mt-1">
                 {activeQueue.qrCodeToken}
               </span>
             </div>

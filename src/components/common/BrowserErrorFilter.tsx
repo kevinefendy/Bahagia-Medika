@@ -2,18 +2,37 @@
 
 import { useEffect } from 'react';
 
+const isBenignError = (str: string) =>
+  str.includes('Sender: Failed to get initial state') ||
+  str.includes('cast_sender') ||
+  str.includes('chrome-extension://') ||
+  str.includes('sender_getProviderState') ||
+  str.includes('sender-wallet') ||
+  str.includes('epapihdplajcdnnkdeiahlgigofloibg') ||
+  str.includes('fdprocessedid');
+
 // Suppress known benign third-party browser extension / Cast SDK errors early
 if (typeof window !== 'undefined') {
   const originalError = console.error;
   console.error = function (...args: unknown[]) {
-    const firstArg = typeof args[0] === 'string' ? args[0] : '';
-    if (
-      firstArg.includes('Sender: Failed to get initial state') ||
-      firstArg.includes('cast_sender') ||
-      firstArg.includes('chrome-extension://')
-    ) {
-      // Benign Google Cast / Chromecast extension background probe error on localhost
-      return;
+    try {
+      const fullText = args
+        .map((a) => {
+          if (typeof a === 'string') return a;
+          if (a instanceof Error) return `${a.message} ${a.stack || ''}`;
+          try {
+            return JSON.stringify(a);
+          } catch {
+            return String(a);
+          }
+        })
+        .join(' ');
+
+      if (isBenignError(fullText)) {
+        return;
+      }
+    } catch {
+      // fallback to original error
     }
     originalError.apply(console, args);
   };
@@ -23,10 +42,8 @@ export default function BrowserErrorFilter() {
   useEffect(() => {
     const handleError = (event: ErrorEvent) => {
       const msg = event.message || '';
-      if (
-        msg.includes('Sender: Failed to get initial state') ||
-        msg.includes('cast_sender')
-      ) {
+      const filename = event.filename || '';
+      if (isBenignError(msg) || isBenignError(filename)) {
         event.preventDefault();
         event.stopImmediatePropagation();
       }
@@ -34,10 +51,7 @@ export default function BrowserErrorFilter() {
 
     const handleRejection = (event: PromiseRejectionEvent) => {
       const reason = event.reason?.message || String(event.reason || '');
-      if (
-        reason.includes('Sender: Failed to get initial state') ||
-        reason.includes('cast_sender')
-      ) {
+      if (isBenignError(reason)) {
         event.preventDefault();
         event.stopImmediatePropagation();
       }

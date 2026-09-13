@@ -6,41 +6,37 @@ import { Stethoscope, CalendarCheck, Building2, UserCheck, ArrowUpRight, Phone, 
 const ACTION_PILLARS = [
   {
     title: 'Dokter Spesialis',
-    desc: 'Temukan profil, keahlian, dan jadwal praktik 120+ dokter spesialis & subspesialis.',
+    desc: 'Cari profil, bidang keahlian, dan jadwal praktik 120+ dokter spesialis & subspesialis konsultan.',
     href: '/dokter',
-    badge: '120+ Spesialis',
+    badge: '120+ Dokter Ahli',
     icon: Stethoscope,
-    gradient: 'from-[#285F75]/10 to-[#78AFC0]/10',
     iconBg: 'bg-[#285F75] text-white',
     hoverBorder: 'hover:border-[#285F75]',
   },
   {
-    title: 'Jadwal & Janji Temu',
-    desc: 'Atur jadwal konsultasi rawat jalan lebih praktis, cepat, dan terkonfirmasi otomatis.',
-    href: '/buat-janji',
-    badge: 'Reservasi Cepat',
-    icon: CalendarCheck,
-    gradient: 'from-[#2E9E7B]/10 to-[#285F75]/10',
-    iconBg: 'bg-[#2E9E7B] text-white',
-    hoverBorder: 'hover:border-[#2E9E7B]',
-  },
-  {
-    title: 'Layanan & Fasilitas',
-    desc: 'Eksplorasi layanan poliklinik, kamar rawat inap, ICU/NICU, hingga diagnostik canggih.',
-    href: '/layanan',
-    badge: 'Fasilitas Terpadu',
+    title: 'Lokasi & Fasilitas RS',
+    desc: 'Panduan gedung rawat jalan, lobi IGD 24 jam, fasilitas diagnostik, dan rute transportasi.',
+    href: '/fasilitas',
+    badge: 'Fasilitas RS',
     icon: Building2,
-    gradient: 'from-[#78AFC0]/10 to-[#285F75]/10',
     iconBg: 'bg-[#18313D] text-white',
     hoverBorder: 'hover:border-[#18313D]',
   },
   {
+    title: 'Jadwal & Buat Janji',
+    desc: 'Reservasi konsultasi dokter spesialis secara praktis dengan e-voucher antrean resmi.',
+    href: '/buat-janji',
+    badge: 'Reservasi Mandiri',
+    icon: CalendarCheck,
+    iconBg: 'bg-[#2E9E7B] text-white',
+    hoverBorder: 'hover:border-[#2E9E7B]',
+  },
+  {
     title: 'Portal Pasien MyMedika',
-    desc: 'Pantau rekam medis elektronik, status antrean digital, dan riwayat pemeriksaan Anda.',
+    desc: 'Pantau rekam medis elektronik SATUSEHAT, hasil laboratorium, dan riwayat pemeriksaan Anda.',
     href: '/dashboard',
-    badge: 'Digital Portal',
+    badge: 'Portal Pasien',
     icon: UserCheck,
-    gradient: 'from-[#D9A21B]/10 to-[#285F75]/10',
     iconBg: 'bg-[#285F75] text-white',
     hoverBorder: 'hover:border-[#285F75]',
   },
@@ -48,7 +44,7 @@ const ACTION_PILLARS = [
 
 export default function QuickAccessHub() {
   return (
-    <section className="relative z-20 max-w-7xl mx-auto px-4 -mt-8 sm:-mt-10 mb-12">
+    <section className="relative z-20 max-w-7xl mx-auto px-4 -mt-6 sm:-mt-8 mb-12">
       {/* 4 Pilar Kartu Akses Pasien */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {ACTION_PILLARS.map((item) => {
@@ -60,19 +56,16 @@ export default function QuickAccessHub() {
               className={`group relative flex flex-col justify-between p-5 sm:p-6 bg-white rounded-2xl border border-[var(--color-border)] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${item.hoverBorder}`}
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
+                <div className="mb-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-110 ${item.iconBg}`}>
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full bg-[var(--color-surface)] text-[var(--color-primary)] border border-[var(--color-border)]/60">
-                    {item.badge}
-                  </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors mb-2 flex items-center justify-between">
+                <h3 className="text-base sm:text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors mb-2 min-h-[28px] flex items-center">
                   <span>{item.title}</span>
                 </h3>
-                <p className="text-xs sm:text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                <p className="text-xs sm:text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-4 min-h-[42px] line-clamp-2">
                   {item.desc}
                 </p>
               </div>

@@ -20,6 +20,9 @@
 }
 
 @theme {
+  --font-sans: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-serif: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --color-primary: #285F75;
   --color-primary-dark: #18313D;
   --color-primary-light: #EAF4F6;
@@ -42,8 +45,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body, button, input, select, textarea {
+  font-family: var(--font-poppins), 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
 body {
-  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
   color: var(--color-text-primary);
   background-color: var(--color-background);
 }

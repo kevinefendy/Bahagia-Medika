@@ -9,7 +9,6 @@ import {
   PhoneCall,
   ShieldCheck,
   HeartPulse,
-  Building2,
   ArrowRight,
   Play,
   Pause,
@@ -31,33 +30,33 @@ const SCENES: VideoScene[] = [
   {
     id: 'CmABnKuKvyo',
     code: 'SCENE 01 • AMBULANS GAWAT DARURAT',
-    badge: 'INSTALASI GAWAT DARURAT (IGD 24 JAM)',
-    title: 'Armada Ambulans & Tim Gawat Darurat Bahagia Medika Jakarta',
-    desc: 'Armada ambulans siaga 24 jam dengan sistem navigasi terpadu dan tim medis darurat di garis depan RS Bahagia Medika Jakarta.',
+    badge: 'IGD SIAGA 24 JAM',
+    title: 'Armada Ambulans & Tim Darurat Siaga',
+    desc: 'Armada siaga 24 jam dengan sistem navigasi terpadu dan tim paramedis bersertifikasi ACLS.',
     pill: '01 Ambulans Siaga',
   },
   {
     id: 'rp_myVO-EzM',
     code: 'SCENE 02 • TIM MEDIS IGD SIAGA',
-    badge: 'DOKTER JAGA & TRIAGE 24 JAM',
-    title: 'Kesiapsiagaan Tim Dokter & IGD 24 Jam RS Bahagia Medika Jakarta',
-    desc: 'Respons cepat tim medis darurat dan dokter jaga spesialis 24 jam dalam menangani pasien kondisi darurat di RS Bahagia Medika Jakarta.',
+    badge: 'DOKTER SPESIALIS EMERGENSI',
+    title: 'Kesiapsiagaan Tim Dokter & Triage 24 Jam',
+    desc: 'Respons cepat dokter jaga spesialis dan perawat darurat menangani kondisi kritis.',
     pill: '02 IGD Siaga 24 Jam',
   },
   {
     id: 'tSM_epOAEzc',
     code: 'SCENE 03 • BEDAH & OPERASI MODERN',
     badge: 'KAMAR BEDAH TERPADU',
-    title: 'Kamar Operasi & Bedah Modern RS Bahagia Medika Jakarta',
-    desc: 'Prosedur bedah modern dengan instrumen sterilisasi canggih berstandar internasional dan tim spesialis bedah di RS Bahagia Medika Jakarta.',
+    title: 'Kamar Bedah Berstandar Internasional',
+    desc: 'Teknologi laminar air flow dan instrumen sterilisasi canggih untuk pembedahan presisi.',
     pill: '03 Kamar Bedah Modern',
   },
   {
     id: 'a4YGQBI_Dcs',
     code: 'SCENE 04 • RADIOLOGI & CT-SCAN',
-    badge: 'DIAGNOSTIK & RADIOLOGI DIGITAL',
-    title: 'Deteksi Dini & Fasilitas CT-Scan Modern RS Bahagia Medika Jakarta',
-    desc: 'Pemeriksaan diagnostik radiologi & CT-Scan multi-slice mutakhir untuk deteksi dini penyakit secara presisi di RS Bahagia Medika Jakarta.',
+    badge: 'DIAGNOSTIK PRESISI',
+    title: 'Radiologi Digital & CT-Scan Multi-Slice',
+    desc: 'Pemeriksaan resolusi tinggi untuk deteksi dini dan penegakan diagnosis akurat.',
     pill: '04 Radiologi CT-Scan',
   },
 ];
@@ -77,6 +76,7 @@ export default function CinematicHero() {
   const [visitedScenes, setVisitedScenes] = useState<Set<number>>(new Set([0]));
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMounted(true);
   }, []);
 
@@ -139,20 +139,14 @@ export default function CinematicHero() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Clinical Authority, Headline & Triage Search */}
           <div className="lg:col-span-6 xl:col-span-7 space-y-5 sm:space-y-6">
-            {/* Accreditation Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/90 border border-teal-200/80 px-3.5 py-1.5 rounded-full text-xs font-semibold text-[var(--color-primary)] shadow-2xs backdrop-blur-xs">
-              <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Akreditasi Mutu KARS Paripurna &bull; Rumah Sakit Rujukan Modern</span>
-            </div>
-
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[var(--color-text-primary)] tracking-tight leading-[1.15]">
-              Layanan Medis Presisi & Komprehensif untuk Pemulihan Optimal.
+            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-[var(--color-text-primary)] tracking-tight leading-[1.18]">
+              Kesehatan Anda dan Keluarga, Prioritas Utama Kami.
             </h1>
 
             {/* Subtitle */}
             <p className="text-xs sm:text-base text-[var(--color-text-secondary)] leading-relaxed max-w-2xl font-normal">
-              RS Bahagia Medika Jakarta memadukan keahlian 120+ dokter spesialis konsultan, instalasi gawat darurat bersertifikasi ACLS 24 jam, kamar bedah terpadu modern, serta rekam medis digital yang terintegrasi secara aman.
+              RS Bahagia Medika Jakarta menghadirkan pelayanan kesehatan berstandar KARS Paripurna dengan keahlian 120+ dokter spesialis konsultan, IGD siaga 24 jam, serta fasilitas bedah dan diagnostik mutakhir.
             </p>
 
             {/* Main CTAs */}
@@ -207,7 +201,7 @@ export default function CinematicHero() {
                     <select
                       value={selectedSpecialty}
                       onChange={(e) => setSelectedSpecialty(e.target.value)}
-                      className="w-full px-3 py-2 text-xs font-medium bg-gray-50 rounded-lg border border-gray-200 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+                      className="w-full h-10 px-3 py-2 text-xs font-medium bg-gray-50 rounded-lg border border-gray-200 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
                     >
                       <option value="">Semua Poliklinik Spesialis</option>
                       <option value="Jantung">Poli Jantung & Pembuluh Darah (Sp.JP)</option>
@@ -228,14 +222,14 @@ export default function CinematicHero() {
                       placeholder="Contoh: Dr. Dewi, USG, Kateterisasi"
                       value={searchDoctor}
                       onChange={(e) => setSearchDoctor(e.target.value)}
-                      className="w-full px-3 py-2 text-xs font-medium bg-gray-50 rounded-lg border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+                      className="w-full h-10 px-3 py-2 text-xs font-medium bg-gray-50 rounded-lg border border-gray-200 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] transition-all"
                     />
                   </div>
 
                   <div className="sm:col-span-2 flex items-end">
                     <button
                       type="submit"
-                      className="w-full py-2 px-3 rounded-lg text-xs font-bold bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-1 shadow-2xs h-[38px] sm:h-[34px]"
+                      className="w-full h-10 px-3 rounded-lg text-xs font-bold bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] transition-colors flex items-center justify-center gap-1 shadow-2xs active:scale-95"
                     >
                       <span>Cari</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -250,7 +244,7 @@ export default function CinematicHero() {
               <div className="p-3.5 rounded-2xl bg-white border border-[var(--color-border)] shadow-2xs space-y-1">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-bold text-gray-500 uppercase">IGD & Trauma</span>
-                  <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
                 <p className="text-sm font-black text-gray-900">Siaga 24/7</p>
                 <p className="text-[11px] text-gray-500">Tim Dokter Spesialis & ACLS</p>
@@ -272,7 +266,7 @@ export default function CinematicHero() {
           {/* Right Column: 4-Scene Cinematic Video Player */}
           <div className="lg:col-span-6 xl:col-span-5 relative mt-6 lg:mt-0">
             {/* Floating Indonesian Hospital Accreditation Badge */}
-            <div className="hidden sm:flex absolute -top-5 -left-4 z-20 items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-teal-100 animate-float-slow">
+            <div className="hidden sm:flex absolute -top-4 -left-3 z-20 items-center gap-3 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl border border-teal-100 animate-float-slow">
               <div className="w-9 h-9 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center shrink-0">
                 <ShieldCheck className="w-5 h-5 text-[var(--color-primary)]" />
               </div>
@@ -282,8 +276,8 @@ export default function CinematicHero() {
               </div>
             </div>
 
-            {/* Floating Emergency Response Badge */}
-            <div className="flex absolute -bottom-7 sm:-bottom-8 lg:-bottom-9 left-2 sm:left-4 lg:-left-8 xl:-left-12 z-20 items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-teal-100 animate-float-reverse">
+            {/* Floating Emergency Response Badge - safely anchored so it never protrudes below hero into next section */}
+            <div className="hidden sm:flex absolute bottom-12 sm:bottom-16 -left-3 lg:-left-5 z-20 items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl border border-teal-100 animate-float-reverse">
               <div className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
                 <HeartPulse className="w-4 h-4 text-emerald-600" />
               </div>
@@ -298,11 +292,6 @@ export default function CinematicHero() {
 
             {/* Video Viewport Frame */}
             <div className="relative rounded-3xl overflow-hidden border-4 sm:border-8 border-white shadow-2xl bg-slate-950 w-full h-[360px] sm:h-[440px] lg:h-[480px]">
-              {/* Emergency Ambulance Flashing Strobe Accent on Scene 0 */}
-              {currentScene === 0 && (
-                <div className="absolute inset-0 pointer-events-none z-10 opacity-30 animate-pulse bg-[radial-gradient(ellipse_at_top_right,rgba(239,68,68,0.35)_0%,transparent_60%),radial-gradient(ellipse_at_bottom_left,rgba(56,189,248,0.35)_0%,transparent_60%)]" />
-              )}
-
               {/* YouTube Video Embeds with visited scene memory */}
               {isMounted &&
                 SCENES.map((scene, index) => {
@@ -332,9 +321,9 @@ export default function CinematicHero() {
 
               {/* In-Video Top HUD */}
               <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex items-center justify-between z-15">
-                <div className="inline-flex items-center gap-2 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-white text-[10px] sm:text-[11px] font-bold tracking-wider uppercase shadow-sm">
-                  <span className="w-2 h-2 rounded-full bg-rose-500 animate-pulse shrink-0" />
-                  <span className="truncate max-w-[190px] sm:max-w-none">{SCENES[currentScene].code}</span>
+                <div className="inline-flex items-center gap-2 bg-slate-900/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 text-white text-[10px] sm:text-[11px] font-semibold tracking-wide shadow-sm">
+                  <span className="w-2 h-2 rounded-full bg-teal-400 shrink-0" />
+                  <span className="truncate max-w-[200px] sm:max-w-none">Fasilitas Medis RS Bahagia Medika</span>
                 </div>
 
                 <div className="flex items-center gap-1.5 sm:gap-2">
@@ -423,7 +412,7 @@ export default function CinematicHero() {
       <Modal
         isOpen={showTourModal}
         onClose={() => setShowTourModal(false)}
-        title="Tur Fasilitas & Kampus Medis RS Bahagia Medika"
+        title="Tur Fasilitas & Gedung RS Bahagia Medika"
         size="lg"
       >
         <div className="space-y-4 py-2 text-xs">

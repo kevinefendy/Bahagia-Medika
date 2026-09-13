@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Heart, Cookie } from 'lucide-react';
 import Logo from '@/components/ui/Logo';
 
 const QUICK_LINKS = [
@@ -20,25 +22,6 @@ const INFO_LINKS = [
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-text-primary)] text-white">
-      {/* Emergency CTA */}
-      <div className="bg-[var(--color-error)]">
-        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center shrink-0">
-              <Phone className="h-5 w-5 text-white" />
-            </div>
-            <div>
-              <p className="text-sm font-semibold text-white">Butuh Bantuan Darurat?</p>
-              <p className="text-xs text-white/80">IGD melayani 24 jam non-stop</p>
-            </div>
-          </div>
-          <a href="tel:02112349999" className="inline-flex items-center gap-2 bg-white text-[var(--color-error)] font-semibold px-5 py-2.5 rounded-lg text-sm hover:bg-white/90 transition-colors">
-            <Phone className="h-4 w-4" />
-            (021) 1234-9999
-          </a>
-        </div>
-      </div>
-
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -126,8 +109,30 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Bahagia Medika. Dibuat dengan <Heart className="h-3 w-3 text-[var(--color-error)] fill-current" /> untuk kesehatan Anda.
           </p>
           <div className="flex items-center gap-4 text-xs text-gray-500">
-            <Link href="#" className="hover:text-white transition-colors">Kebijakan Privasi</Link>
-            <Link href="#" className="hover:text-white transition-colors">Syarat & Ketentuan</Link>
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(new CustomEvent('open-cookie-settings'));
+                }
+              }}
+              className="hover:text-white transition-colors cursor-pointer inline-flex items-center gap-1"
+            >
+              <Cookie className="w-3.5 h-3.5 text-gray-400" />
+              <span>Pengaturan Cookie</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (typeof window !== 'undefined') {
+                  window.dispatchEvent(new CustomEvent('open-privacy-statement'));
+                }
+              }}
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Pernyataan Privasi
+            </button>
+            <Link href="/tentang" className="hover:text-white transition-colors">Syarat & Ketentuan</Link>
           </div>
         </div>
       </div>

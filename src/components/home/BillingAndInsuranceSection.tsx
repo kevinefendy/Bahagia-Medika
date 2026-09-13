@@ -9,7 +9,7 @@ const BILLING_FEATURES = [
     title: 'Estimasi Biaya Perawatan',
     desc: 'Perkiraan transparan rincian biaya tindakan, kamar rawat inap, hingga paket persalinan sebelum prosedur dilakukan.',
     linkText: 'Pelajari estimasi biaya',
-    href: '/layanan',
+    href: '/estimasi-biaya',
   },
   {
     icon: Shield,
@@ -67,13 +67,13 @@ export default function BillingAndInsuranceSection() {
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-14">
         <p className="text-xs sm:text-sm font-semibold text-[var(--color-primary)] tracking-wider uppercase mb-2">
-          Kemudahan Administrasi & Penjaminan
+          Administrasi & Penjaminan Pasien
         </p>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-4">
-          Transparansi Biaya & Perlindungan Pasien
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-3">
+          Bantuan Pembayaran & Administrasi Tagihan
         </h2>
         <p className="text-sm sm:text-base text-[var(--color-text-secondary)] leading-relaxed">
-          Kesehatan Anda adalah prioritas utama kami. Bahagia Medika menjunjung tinggi kejujuran tarif, kepastian estimasi pembiayaan, serta kemudahan klaim asuransi maupun BPJS Kesehatan.
+          Kesehatan Anda adalah prioritas utama kami. RS Bahagia Medika menjunjung tinggi kejujuran tarif, kepastian estimasi pembiayaan, serta kemudahan klaim asuransi maupun BPJS Kesehatan.
         </p>
       </div>
 
@@ -139,6 +139,31 @@ export default function BillingAndInsuranceSection() {
               +40 Lainnya
             </Link>
           </div>
+        </div>
+      </div>
+
+      {/* Patient Facility Guidance Callout (Inspired by premier hospital standard) */}
+      <div className="mt-8 bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-10 text-center shadow-2xs">
+        <h3 className="text-lg sm:text-2xl font-bold text-[var(--color-text-primary)] mb-2.5">
+          Merasa Kurang Sehat? Panduan Memilih Fasilitas Perawatan
+        </h3>
+        <p className="text-xs sm:text-sm text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-6 leading-relaxed">
+          Memutuskan apakah Anda memerlukan konsultasi dokter umum, poliklinik spesialis, atau Instalasi Gawat Darurat (IGD) dapat membingungkan. Tim medis kami siap memandu Anda menentukan fasilitas yang tepat sesuai kondisi Anda.
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Link
+            href="/dashboard/chat"
+            className="inline-flex items-center gap-2 px-6 py-2.5 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-xs sm:text-sm font-semibold rounded-xl transition-all shadow-xs"
+          >
+            <span>Panduan Triase & Tanya Gejala</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <a
+            href="tel:02112349999"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-gray-100 border border-[var(--color-border)] text-rose-700 text-xs sm:text-sm font-semibold rounded-xl transition-colors"
+          >
+            <span>IGD Darurat 24 Jam: (021) 1234-9999</span>
+          </a>
         </div>
       </div>
     </section>

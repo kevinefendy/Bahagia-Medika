@@ -112,7 +112,7 @@ export default function RecentLabResultsWidget() {
             <div className="bg-[var(--color-surface)] p-3.5 rounded-xl border border-[var(--color-border)] grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
               <div>
                 <p className="text-gray-500">No. Dokumen:</p>
-                <p className="font-mono font-bold text-[var(--color-text-primary)]">{selectedLab.testCode}</p>
+                <p className="font-bold text-[var(--color-text-primary)]">{selectedLab.testCode}</p>
               </div>
               <div>
                 <p className="text-gray-500">Tanggal Tes:</p>
@@ -148,7 +148,7 @@ export default function RecentLabResultsWidget() {
                     {selectedLab.parameters.map((p, idx) => (
                       <tr key={idx} className="hover:bg-gray-50/60">
                         <td className="p-2.5 font-medium text-gray-800">{p.parameter}</td>
-                        <td className="p-2.5 font-mono font-bold text-gray-900">{p.value}</td>
+                        <td className="p-2.5 font-bold text-gray-900">{p.value}</td>
                         <td className="p-2.5 text-gray-500">{p.unit || '-'}</td>
                         <td className="p-2.5 text-gray-600">{p.normalRange}</td>
                         <td className="p-2.5 text-center">

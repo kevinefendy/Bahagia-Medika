@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import {
   Search,
-  Stethoscope,
   Calendar,
   Clock,
   Phone,
@@ -41,7 +40,7 @@ import { ServiceCard } from '@/components/cards';
 import { ArticleCard } from '@/components/cards';
 import { NewsCard } from '@/components/cards';
 import { TestimonialCard } from '@/components/cards';
-import { CardSkeleton } from '@/components/ui/Skeleton';
+import { CardSkeleton, DoctorCardSkeleton } from '@/components/ui/Skeleton';
 import { doctorService } from '@/lib/services/doctorService';
 import { serviceService } from '@/lib/services/serviceService';
 import { articleService } from '@/lib/services/articleService';
@@ -209,15 +208,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-primary-light)] text-[var(--color-primary)] text-xs font-semibold mb-2">
-                <Stethoscope className="w-3.5 h-3.5" />
-                <span>Tenaga Medis Berpengalaman</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] tracking-tight">
                 Tim Dokter Spesialis & Subspesialis
               </h2>
               <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-2 max-w-xl">
-                Dokter konsultan lulusan fakultas kedokteran terkemuka dan anggota organisasi profesi resmi dengan rekam jejak klinis terpercaya.
+                Dokter konsultan berpengalaman dan anggota organisasi profesi kedokteran resmi dengan rekam jejak klinis terpercaya.
               </p>
             </div>
 
@@ -232,7 +227,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {loading
-              ? Array.from({ length: 4 }).map((_, i) => <CardSkeleton key={i} />)
+              ? Array.from({ length: 4 }).map((_, i) => <DoctorCardSkeleton key={i} />)
               : doctors.map((doctor) => <DoctorCard key={doctor.id} doctor={doctor} />)}
           </div>
         </div>
@@ -242,10 +237,6 @@ export default function HomePage() {
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24" delay={50}>
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-primary-light)] text-[var(--color-primary)] text-xs font-semibold mb-2">
-              <Building2 className="w-3.5 h-3.5" />
-              <span>Poliklinik & Unit Penunjang</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] tracking-tight">
               Layanan Medis Komprehensif
             </h2>
@@ -287,10 +278,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs font-bold uppercase tracking-widest text-[#98D2E1] block mb-2">
-              Tata Kelola Klinis & Mutu Rumah Sakit
+              Standar Mutu & Akreditasi Rumah Sakit
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
-              Standar Keselamatan Pasien Berbasis Bukti Ilmiah
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+              Keselamatan Pasien & Keunggulan Klinis Berkelanjutan
             </h2>
             <p className="text-sm sm:text-base text-white/80 mt-3 leading-relaxed">
               Kami menerapkan standar kendali mutu pelayanan medis berjenjang untuk memastikan setiap diagnosis, tindakan operatif, dan terapi obat berlangsung dengan tingkat presisi dan keamanan tertinggi.
@@ -317,26 +308,26 @@ export default function HomePage() {
           {/* Institutional Stats Strip */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 pt-10 border-t border-white/15 text-center">
             <div>
-              <p className="text-3xl sm:text-4xl font-black text-white font-mono">120+</p>
+              <p className="text-3xl sm:text-4xl font-black text-white tracking-tight">120+</p>
               <p className="text-xs text-white/70 mt-1 uppercase font-semibold">Dokter Spesialis & Konsultan</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-black text-white font-mono">250</p>
+              <p className="text-3xl sm:text-4xl font-black text-white tracking-tight">250</p>
               <p className="text-xs text-white/70 mt-1 uppercase font-semibold">Tempat Tidur Perawatan</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-black text-white font-mono">6 Unit</p>
+              <p className="text-3xl sm:text-4xl font-black text-white tracking-tight">6 Unit</p>
               <p className="text-xs text-white/70 mt-1 uppercase font-semibold">Kamar Bedah Laminar Flow</p>
             </div>
             <div>
-              <p className="text-3xl sm:text-4xl font-black text-white font-mono">24 Jam</p>
+              <p className="text-3xl sm:text-4xl font-black text-white tracking-tight">24 Jam</p>
               <p className="text-xs text-white/70 mt-1 uppercase font-semibold">Instalasi Laboratorium & Radiologi</p>
             </div>
           </div>
         </div>
       </AnimatedSection>
 
-      {/* 10. Tentang Rumah Sakit & Kampus Medis */}
+      {/* 10. Tentang Rumah Sakit */}
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24" delay={100}>
         <div className="grid md:grid-cols-12 gap-10 lg:gap-14 items-center">
           <div className="md:col-span-6 relative">
@@ -360,10 +351,7 @@ export default function HomePage() {
 
           <div className="md:col-span-6 space-y-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
-                Profil Institusi
-              </span>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--color-text-primary)] mt-3 leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--color-text-primary)] leading-tight">
                 Pusat Rujukan Medis Terpadu & Terpercaya di Jakarta Selatan.
               </h2>
             </div>
@@ -405,9 +393,6 @@ export default function HomePage() {
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-8" delay={100}>
         <div className="bg-gradient-to-r from-[#18313D] via-[#214F60] to-[#285F75] rounded-3xl p-8 sm:p-12 text-white shadow-lg border border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl space-y-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#98D2E1] bg-white/10 px-3 py-1 rounded-full border border-white/15 inline-block">
-              Konsultasi Gejala Awal Online
-            </span>
             <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
               Medika Care: Panduan Kesehatan Cerdas 24 Jam
             </h3>
@@ -442,10 +427,7 @@ export default function HomePage() {
       <AnimatedSection className="bg-white border-y border-[var(--color-border)] py-16 sm:py-24" delay={100}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
-              Pengalaman Pasien
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] mt-3">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)]">
               Kisah Pemulihan & Pengalaman Klinis
             </h2>
             <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-2">
@@ -465,10 +447,7 @@ export default function HomePage() {
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
-              Edukasi Kesehatan
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] mt-2 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] tracking-tight">
               Artikel & Wawasan Medis Terkini
             </h2>
             <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-1 max-w-xl">
@@ -497,10 +476,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
-                Kabar Institusi
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] mt-2 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] tracking-tight">
                 Berita & Agenda Rumah Sakit
               </h2>
               <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-1 max-w-xl">
@@ -525,48 +501,12 @@ export default function HomePage() {
         </div>
       </AnimatedSection>
 
-      {/* 15. Emergency Hotline & Evakuasi Medis Strip */}
-      <AnimatedSection className="relative bg-gradient-to-r from-rose-700 via-rose-800 to-[#18313D] text-white py-14 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-2 max-w-2xl text-center md:text-left">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-xs font-bold uppercase tracking-wider text-rose-100">
-              <span className="w-2 h-2 rounded-full bg-white animate-ping" />
-              Instalasi Gawat Darurat & Trauma Center 24 Jam
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight">
-              Keadaan Darurat Medis? Kami Siap Melayani 24/7
-            </h2>
-            <p className="text-xs sm:text-sm text-rose-100/90 leading-relaxed">
-              Tim dokter jaga IGD, perawat resusitasi bersertifikasi ACLS/ATLS, armada ambulans ICU, dan kamar operasi darurat siap siaga penuh.
-            </p>
-          </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0 w-full sm:w-auto">
-            <a
-              href="tel:02178909999"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-white text-rose-800 font-extrabold text-xs sm:text-base shadow-lg hover:bg-rose-50 transition-all text-center"
-            >
-              <PhoneCall className="w-5 h-5 text-rose-700" />
-              <span>(021) 7890-9999</span>
-            </a>
-            <a
-              href="tel:119"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl bg-rose-900/60 border border-white/20 text-white font-bold text-xs sm:text-sm hover:bg-rose-900 transition-colors text-center"
-            >
-              <span>Hotline Darurat 119</span>
-            </a>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* 16. Kampus Medis, Lokasi & Akses Pasien */}
+      {/* 16. Gedung Rumah Sakit, Lokasi & Akses Pasien */}
       <AnimatedSection className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-primary)] bg-[var(--color-primary-light)] px-3 py-1 rounded-full">
-            Lokasi & Akses
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] mt-3">
-            Kunjungi Kampus Medis Kami
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)]">
+            Kunjungi Rumah Sakit Kami
           </h2>
           <p className="text-sm text-[var(--color-text-secondary)] mt-2">
             Terletak strategis di koridor kesehatan Jakarta Selatan dengan akses transportasi publik dan parkir luas.
@@ -586,7 +526,7 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-2 text-xs font-bold text-[var(--color-primary)] mb-2 uppercase">
                 <Building2 className="w-4 h-4" />
-                <span>Kampus Medis Terpadu</span>
+                <span>Kompleks Rumah Sakit Terpadu</span>
               </div>
               <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
                 RS Bahagia Medika Jakarta

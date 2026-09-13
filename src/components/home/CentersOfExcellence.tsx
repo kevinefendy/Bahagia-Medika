@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Award, ShieldCheck, HeartPulse, Baby, Sparkles, Activity, ArrowRight } from 'lucide-react';
+import { ShieldCheck, HeartPulse, Baby, Sparkles, Activity, ArrowRight } from 'lucide-react';
 
 const CENTERS = [
   {
@@ -64,15 +64,11 @@ export default function CentersOfExcellence() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[var(--color-border)] text-xs font-semibold text-[var(--color-primary)] mb-3 shadow-2xs">
-              <Award className="w-3.5 h-3.5" />
-              Pusat Keunggulan Medis
-            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--color-text-primary)]">
-              Standar Klinis Unggulan & Inovasi Perawatan
+              Pusat Layanan Unggulan
             </h2>
             <p className="text-sm sm:text-base text-[var(--color-text-secondary)] mt-2">
-              Berkomitmen memberikan standar penanganan klinis terbaik melalui teknologi kedokteran terkini dan kolaborasi multidisiplin dokter spesialis terpercaya.
+              Pelayanan medis terpadu dengan teknologi mutakhir dan tim dokter spesialis konsultan.
             </p>
           </div>
 
@@ -92,7 +88,7 @@ export default function CentersOfExcellence() {
             return (
               <div
                 key={center.title}
-                className="group relative flex flex-col sm:flex-row bg-white rounded-2xl border border-[var(--color-border)] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                className="group relative flex flex-col sm:flex-row bg-white rounded-2xl border border-[var(--color-border)] overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 h-full"
               >
                 {/* Image side */}
                 <div className="sm:w-2/5 h-48 sm:h-auto relative overflow-hidden bg-gray-100 shrink-0">
@@ -107,7 +103,7 @@ export default function CentersOfExcellence() {
                 </div>
 
                 {/* Content side */}
-                <div className="sm:w-3/5 p-5 sm:p-6 flex flex-col justify-between">
+                <div className="sm:w-3/5 p-5 sm:p-6 flex flex-col justify-between flex-1">
                   <div>
                     <div className="w-9 h-9 rounded-lg bg-[var(--color-primary-light)] text-[var(--color-primary)] flex items-center justify-center mb-3">
                       <Icon className="w-5 h-5" />
@@ -115,10 +111,10 @@ export default function CentersOfExcellence() {
                     <span className="text-[11px] font-semibold text-[var(--color-primary)] tracking-wide uppercase block">
                       {center.subtitle}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors mt-0.5 mb-2 leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-[var(--color-text-primary)] group-hover:text-[var(--color-primary)] transition-colors mt-0.5 mb-2 leading-snug min-h-[48px] flex items-center">
                       {center.title}
                     </h3>
-                    <p className="text-xs sm:text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-4">
+                    <p className="text-xs sm:text-[13px] text-[var(--color-text-secondary)] leading-relaxed mb-4 min-h-[52px] line-clamp-3">
                       {center.desc}
                     </p>
                   </div>

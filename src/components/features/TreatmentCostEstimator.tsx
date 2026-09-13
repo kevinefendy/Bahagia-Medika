@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import treatmentData from '@/data/treatmentEstimates.json';
-import { Calculator, Shield, CheckCircle2, ArrowRight, HelpCircle, Phone, FileText } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function TreatmentCostEstimator() {
   const [selectedProcId, setSelectedProcId] = useState<string>(treatmentData[0].id);
@@ -26,10 +26,6 @@ export default function TreatmentCostEstimator() {
       <div className="bg-gradient-to-br from-[#F4FAFB] via-white to-[#EAF4F6] border border-[var(--color-border)] rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm">
         {/* Title */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[var(--color-border)] text-xs font-semibold text-[var(--color-primary)] mb-3 shadow-2xs">
-            <Calculator className="w-3.5 h-3.5" />
-            <span>Kalkulator Tarif Medis Transparan</span>
-          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[var(--color-text-primary)] tracking-tight mb-3">
             Simulasi & Estimasi Biaya Tindakan Medis
           </h2>
@@ -43,24 +39,30 @@ export default function TreatmentCostEstimator() {
           <label className="block text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)] mb-3">
             1. Pilih Tindakan Medis / Perawatan:
           </label>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {treatmentData.map((proc) => (
               <button
                 key={proc.id}
                 type="button"
                 onClick={() => setSelectedProcId(proc.id)}
-                className={`p-3.5 rounded-xl border text-left transition-all duration-200 cursor-pointer flex flex-col justify-between ${
+                className={`p-4 rounded-xl border text-left transition-all duration-200 cursor-pointer flex flex-col justify-between ${
                   selectedProcId === proc.id
                     ? 'bg-white border-2 border-[var(--color-primary)] shadow-md ring-2 ring-[var(--color-primary)]/10 text-[var(--color-primary)]'
                     : 'bg-white/70 hover:bg-white border-[var(--color-border)] text-[var(--color-text-secondary)]'
                 }`}
               >
-                <span className="text-xs font-bold block mb-1 line-clamp-2">
-                  {proc.name}
-                </span>
-                <span className="text-[10px] opacity-75 block">
-                  {proc.lengthOfStay}
-                </span>
+                <div>
+                  <span className="text-[10px] font-semibold text-[var(--color-primary)] uppercase tracking-wider block mb-1">
+                    {proc.category}
+                  </span>
+                  <span className="text-xs sm:text-sm font-bold block mb-2 line-clamp-1 text-[var(--color-text-primary)]">
+                    {proc.name}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between pt-2 border-t border-[var(--color-border)]/40 text-[11px] text-[var(--color-text-secondary)]">
+                  <span>Masa Rawat Inap:</span>
+                  <span className="font-semibold text-[var(--color-text-primary)]">{proc.lengthOfStay}</span>
+                </div>
               </button>
             ))}
           </div>
@@ -69,21 +71,31 @@ export default function TreatmentCostEstimator() {
         {/* Step 2: Pilih Kelas Perawatan & Jalur Penjaminan */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           {/* Kelas */}
-          <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)] mb-2">
-              2. Pilih Kelas Kamar Rawat Inap:
-            </label>
+          <div className="p-4 sm:p-5 bg-white rounded-2xl border border-[var(--color-border)] flex flex-col justify-between shadow-2xs">
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
+                  2. Pilih Kelas Kamar Rawat:
+                </label>
+                <span className="text-[10px] font-semibold text-[var(--color-primary)] bg-[var(--color-primary-light)] px-2 py-0.5 rounded-full">
+                  4 Tipe Kamar
+                </span>
+              </div>
+              <p className="text-[11px] text-[var(--color-text-secondary)] mb-3">
+                Pilih kenyamanan fasilitas dan kapasitas kamar perawatan Anda.
+              </p>
+            </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {[
+              {([
                 { id: 'vvip', label: 'VVIP' },
                 { id: 'vip', label: 'VIP Deluxe' },
                 { id: 'kelas1', label: 'Kelas 1' },
                 { id: 'kelas2', label: 'Kelas 2' },
-              ].map((c) => (
+              ] as const).map((c) => (
                 <button
                   key={c.id}
                   type="button"
-                  onClick={() => setSelectedClass(c.id as any)}
+                  onClick={() => setSelectedClass(c.id)}
                   className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer text-center ${
                     selectedClass === c.id
                       ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)] shadow-xs'
@@ -97,20 +109,30 @@ export default function TreatmentCostEstimator() {
           </div>
 
           {/* Metode Pembayaran */}
-          <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)] mb-2">
-              3. Jalur Penjaminan / Pembayaran:
-            </label>
+          <div className="p-4 sm:p-5 bg-white rounded-2xl border border-[var(--color-border)] flex flex-col justify-between shadow-2xs">
+            <div>
+              <div className="flex items-center justify-between mb-1">
+                <label className="block text-xs font-bold uppercase tracking-wider text-[var(--color-text-secondary)]">
+                  3. Jalur Penjaminan / Billing:
+                </label>
+                <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
+                  Cashless & BPJS
+                </span>
+              </div>
+              <p className="text-[11px] text-[var(--color-text-secondary)] mb-3">
+                Mendukung pembayaran mandiri, 50+ asuransi rekanan, dan BPJS Kesehatan.
+              </p>
+            </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {[
+              {([
                 { id: 'mandiri', label: 'Umum / Mandiri' },
                 { id: 'asuransi', label: 'Asuransi Cashless' },
                 { id: 'bpjs', label: 'BPJS Kesehatan' },
-              ].map((p) => (
+              ] as const).map((p) => (
                 <button
                   key={p.id}
                   type="button"
-                  onClick={() => setPaymentMode(p.id as any)}
+                  onClick={() => setPaymentMode(p.id)}
                   className={`py-2.5 px-3 rounded-xl border text-xs font-bold transition-all cursor-pointer text-center ${
                     paymentMode === p.id
                       ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)] shadow-xs'
