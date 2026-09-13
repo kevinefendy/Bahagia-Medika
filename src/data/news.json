@@ -1,0 +1,38 @@
+[
+  {
+    "id": "news-001", "slug": "workshop-kesehatan-jantung",
+    "title": "Workshop Kesehatan Jantung Gratis",
+    "type": "event",
+    "publishedAt": "2026-09-29",
+    "featuredImage": "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=400&fit=crop",
+    "content": "Dalam rangka memperingati Hari Jantung Sedunia, Bahagia Medika akan mengadakan workshop kesehatan jantung secara gratis. Workshop ini terbuka untuk umum dan akan diselenggarakan pada tanggal 29 September 2026 di Aula Gedung Utama.\n\nAcara akan menghadirkan dokter spesialis jantung terkemuka yang akan membahas tentang pencegahan penyakit jantung, pola hidup sehat, dan menjawab pertanyaan peserta.",
+    "isPublished": true
+  },
+  {
+    "id": "news-002", "slug": "pembukaan-klinik-baru",
+    "title": "Pengumuman: Pembukaan Klinik THT",
+    "type": "pengumuman",
+    "publishedAt": "2026-09-01",
+    "featuredImage": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&h=400&fit=crop",
+    "content": "Kami dengan bangga mengumumkan bahwa Bahagia Medika telah membuka klinik THT (Telinga, Hidung, Tenggorokan) baru yang berlokasi di Gedung Utama Lantai 3. Klinik ini dilengkapi dengan peralatan diagnostik modern.",
+    "isPublished": true
+  },
+  {
+    "id": "news-003", "slug": "program-pemeriksaan-gratis",
+    "title": "Program Pemeriksaan Kesehatan Gratis untuk Lansia",
+    "type": "program",
+    "publishedAt": "2026-08-15",
+    "featuredImage": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=400&fit=crop",
+    "content": "Bahagia Medika meluncurkan program pemeriksaan kesehatan gratis khusus untuk warga lanjut usia (60 tahun ke atas) di wilayah Jakarta Selatan. Program ini bertujuan untuk membantu deteksi dini penyakit kronis pada lansia.",
+    "isPublished": true
+  },
+  {
+    "id": "news-004", "slug": "kerjasama-with-university",
+    "title": "Kerja Sama dengan Fakultas Kedokteran UI",
+    "type": "kerja-sama",
+    "publishedAt": "2026-07-20",
+    "featuredImage": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=400&fit=crop",
+    "content": "Bahagia Medika menandatangani nota kesepahaman dengan Fakultas Kerja Sama strategis ini bertujuan untuk pengembangan pendidikan kedokteran dan penelitian kesehatan.",
+    "isPublished": true
+  }
+]

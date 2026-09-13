@@ -1,0 +1,98 @@
+[
+  {
+    "id": "bed-001",
+    "name": "VVIP Suite",
+    "category": "Kamar Privat",
+    "total": 8,
+    "available": 3,
+    "occupied": 5,
+    "pricePerNight": "Rp 2.500.000",
+    "facilities": ["1 Pasien / Kamar", "Sofa Bed Keluarga", "Smart TV 50 inch", "Kamar Mandi Privat Air Panas", "Kulkas & Microwave", "Free Wi-Fi High-Speed"],
+    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+    "status": "Tersedia"
+  },
+  {
+    "id": "bed-002",
+    "name": "VIP Deluxe",
+    "category": "Kamar Privat",
+    "total": 24,
+    "available": 7,
+    "occupied": 17,
+    "pricePerNight": "Rp 1.450.000",
+    "facilities": ["1 Pasien / Kamar", "Kursi Santai Penunggu", "Smart TV 43 inch", "Kamar Mandi Dalam", "Kulkas Mini", "Nurse Call System"],
+    "imageUrl": "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&auto=format&fit=crop&q=80",
+    "status": "Tersedia"
+  },
+  {
+    "id": "bed-003",
+    "name": "Kelas 1",
+    "category": "Semi Privat",
+    "total": 40,
+    "available": 12,
+    "occupied": 28,
+    "pricePerNight": "Rp 750.000",
+    "facilities": ["2 Pasien / Kamar", "Tirai Sekat Privasi", "TV Bersama", "Kamar Mandi Dalam", "AC Sentral", "Menerima BPJS Naik Kelas"],
+    "imageUrl": "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&auto=format&fit=crop&q=80",
+    "status": "Tersedia"
+  },
+  {
+    "id": "bed-004",
+    "name": "Kelas 2",
+    "category": "Reguler",
+    "total": 48,
+    "available": 15,
+    "occupied": 33,
+    "pricePerNight": "Rp 450.000",
+    "facilities": ["4 Pasien / Kamar", "Tirai Privasi per Bed", "Kamar Mandi Bersama", "AC Sentral", "Menerima BPJS Kesehatan"],
+    "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+    "status": "Tersedia"
+  },
+  {
+    "id": "bed-005",
+    "name": "Kelas 3 (Standar BPJS)",
+    "category": "Reguler BPJS",
+    "total": 60,
+    "available": 18,
+    "occupied": 42,
+    "pricePerNight": "Ditanggung Penuh BPJS",
+    "facilities": ["6 Pasien / Kamar", "Kamar Mandi Luas", "AC Ruangan", "Pelayanan Standar Paripurna", "Bebas Iuran Tambahan"],
+    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+    "status": "Tersedia"
+  },
+  {
+    "id": "bed-006",
+    "name": "ICU (Intensive Care Unit)",
+    "category": "Perawatan Kritis",
+    "total": 12,
+    "available": 4,
+    "occupied": 8,
+    "pricePerNight": "Perawatan Kritis",
+    "facilities": ["Ventilator Medis Mutakhir", "Invasive Hemodynamic Monitor", "Rasio Perawat 1:1", "Dokter Intensivis Siaga 24 Jam"],
+    "imageUrl": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&auto=format&fit=crop&q=80",
+    "status": "Terbatas"
+  },
+  {
+    "id": "bed-007",
+    "name": "NICU & PICU (Anak & Bayi)",
+    "category": "Perawatan Kritis",
+    "total": 10,
+    "available": 3,
+    "occupied": 7,
+    "pricePerNight": "Perawatan Neonatus/Anak",
+    "facilities": ["Inkubator Tertutup Suhu Presisi", "Fototerapi Bayi Kuning", "Ventilator Pediatrik", "Spesialis Anak & Konsultan Neonatus"],
+    "imageUrl": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+    "status": "Terbatas"
+  },
+  {
+    "id": "bed-008",
+    "name": "Ruang Isolasi Tekanan Negatif",
+    "category": "Isolasi Khusus",
+    "total": 8,
+    "available": 4,
+    "occupied": 4,
+    "pricePerNight": "Isolasi Infeksius",
+    "facilities": ["Sistem Tekanan Udara Negatif", "Filter HEPA Steril 99.97%", "Anteroom Khusus Petugas", "Monitoring Jarak Jauh"],
+    "imageUrl": "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&auto=format&fit=crop&q=80",
+    "status": "Tersedia"
+  }
+]

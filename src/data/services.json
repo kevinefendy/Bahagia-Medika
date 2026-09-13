@@ -1,0 +1,226 @@
+[
+  {
+    "id": "srv-001",
+    "slug": "klinik-anak",
+    "name": "Klinik Anak",
+    "icon": "baby",
+    "imageUrl": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+    "category": "Rawat Jalan",
+    "shortDescription": "Pelayanan kesehatan anak dari bayi hingga remaja",
+    "description": "Klinik Anak Bahagia Medika menyediakan layanan kesehatan komprehensif untuk anak-anak mulai dari usia bayi hingga remaja. Didukung oleh dokter spesialis anak yang berpengalaman dan fasilitas modern, kami memastikan setiap anak mendapatkan perawatan terbaik.\n\nLayanan kami meliputi imunisasi, pemeriksaan tumbuh kembang anak, penanganan penyakit umum pada anak, serta konsultasi nutrisi. Kami memahami bahwa setiap anak unik, sehingga pendekatan yang kami berikan selalu disesuaikan dengan kebutuhan masing-masing pasien.\n\nDengan suasana klinik yang ramah anak, kami berusaha memberikan pengalaman yang nyaman bagi anak dan orang tua selama berkunjung.",
+    "benefits": [
+      "Dokter spesialis berpengalaman",
+      "Fasilitas modern dan ramah anak",
+      "Jadwal kunjungan fleksibel",
+      "Layanan imunisasi lengkap"
+    ],
+    "relatedDoctorIds": ["doc-001", "doc-002"],
+    "facilityIds": ["fac-007"],
+    "faq": [
+      {
+        "question": "Berapa usia minimum pasien?",
+        "answer": "Klinik Anak melayani pasien dari usia 0-17 tahun."
+      },
+      {
+        "question": "Apakah perlu membuat janji terlebih dahulu?",
+        "answer": "Disarankan untuk membuat janji terlebih dahulu melalui aplikasi atau telepon untuk menghindari waktu tunggu yang lama."
+      }
+    ]
+  },
+  {
+    "id": "srv-002",
+    "slug": "klinik-jantung",
+    "name": "Klinik Jantung",
+    "icon": "heart-pulse",
+    "imageUrl": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=80",
+    "category": "Rawat Jalan",
+    "shortDescription": "Pemeriksaan dan pengobatan penyakit jantung",
+    "description": "Klinik Jantung Bahagia Medika menyediakan layanan diagnostik dan terapeutik untuk berbagai kondisi kardiovaskular. Tim dokter spesialis jantung kami memiliki keahlian dalam menangani penyakit jantung koroner, gagal jantung, aritmia, dan gangguan katup jantung.\n\nFasilitas klinik dilengkapi dengan peralatan EKG, ekokardiografi, dan treadmil untuk pemeriksaan jantung menyeluruh. Kami juga menyediakan program rehabilitasi jantung bagi pasien yang telah menjalani prosedur medis.\n\nPendekatan multidisiplin yang kami terapkan memastikan pasien mendapatkan penanganan komprehensif sesuai dengan kondisi kesehatan jantung mereka.",
+    "benefits": [
+      "Peralatan diagnostik canggih",
+      "Dokter spesialis jantung berpengalaman",
+      "Program rehabilitasi jantung",
+      "Konsultasi online tersedia"
+    ],
+    "relatedDoctorIds": ["doc-003", "doc-004"],
+    "facilityIds": ["fac-007"],
+    "faq": [
+      {
+        "question": "Kapan saya harus memeriksakan jantung?",
+        "answer": "Disarankan untuk memeriksakan jantung jika mengalami gejala seperti nyeri dada, sesak napas, palpitasi, atau memiliki faktor risiko seperti hipertensi dan diabetes."
+      },
+      {
+        "question": "Apakah klinik menerima rujukan dari dokter lain?",
+        "answer": "Ya, kami menerima rujukan dari dokter umum maupun dokter spesialis lainnya."
+      }
+    ]
+  },
+  {
+    "id": "srv-003",
+    "slug": "klinik-kandungan",
+    "name": "Klinik Kandungan & Kebidanan",
+    "icon": "heart-handshake",
+    "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+    "category": "Rawat Jalan",
+    "shortDescription": "Pelayanan kesehatan ibu hamil dan kandungan",
+    "description": "Klinik Kandungan & Kebidanan Bahagia Medika memberikan layanan kesehatan reproduksi yang komprehensif bagi wanita di segala usia. Kami menyediakan pemeriksaan kehamilan, persiapan persalinan, serta penanganan gangguan kandungan.\n\nDilengkapi dengan USG 4D dan peralatan monitoring kehamilan modern, klinik kami memastikan kesehatan ibu dan janin terpantau dengan baik. Tim dokter spesialis kandungan kami berpengalaman dalam menangani kehamilan berisiko tinggi dan operasi kandungan.\n\nSelain itu, kami juga menyediakan konsultasi kesehatan reproduksi, KB, dan program kehamilan bagi pasangan yang sedang merencanakan kehamilan.",
+    "benefits": [
+      "Pemeriksaan USG 4D",
+      "Dokter spesialis kandungan berpengalaman",
+      "Penanganan kehamilan berisiko tinggi",
+      "Layanan persiapan persalinan"
+    ],
+    "relatedDoctorIds": ["doc-005"],
+    "facilityIds": ["fac-008"],
+    "faq": [
+      {
+        "question": "Kapan jadwal pemeriksaan kehamilan yang disarankan?",
+        "answer": "Pemeriksaan kehamilan disarankan setiap bulan pada trimester pertama dan kedua, serta setiap 2 minggu pada trimester ketiga."
+      },
+      {
+        "question": "Apakah klinik menyediakan layanan persalinan normal?",
+        "answer": "Ya, klinik kami menyediakan layanan persalinan normal dengan pengawasan dokter spesialis kandungan."
+      }
+    ]
+  },
+  {
+    "id": "srv-004",
+    "slug": "klinik-kulit",
+    "name": "Klinik Kulit & Kelamin",
+    "icon": "scan-face",
+    "imageUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+    "category": "Rawat Jalan",
+    "shortDescription": "Perawatan kulit dan penyakit kelamin",
+    "description": "Klinik Kulit & Kelamin Bahagia Medika menawarkan solusi perawatan kulit yang komprehensif, mulai dari penanganan masalah kulit ringan hingga kondisi dermatologis yang kompleks. Tim dokter spesialis kulit kami memiliki keahlian dalam penanganan jerawat, eksim, psoriasis, dan infeksi kulit.\n\nKlinik kami juga menyediakan layanan kecantikan kulit seperti chemical peel, laser treatment, dan perawatan anti-aging yang aman dan terpercaya. Semua prosedur dilakukan oleh tenaga medis yang terlatih dan bersertifikat.\n\nDengan menggunakan produk perawatan kulit berkualitas tinggi dan peralatan modern, kami berkomitmen untuk membantu pasien mencapai kulit yang sehat dan optimal.",
+    "benefits": [
+      "Penanganan jerawat dan bekas jerawat",
+      "Perawatan kulit anti-aging",
+      "Laser treatment untuk berbagai masalah kulit",
+      "Konsultasi kulit online"
+    ],
+    "relatedDoctorIds": ["doc-006"],
+    "facilityIds": ["fac-007"],
+    "faq": [
+      {
+        "question": "Bagaimana cara mengatasi jerawat yang membandel?",
+        "answer": "Konsultasikan dengan dokter spesialis kulit untuk mendapatkan penanganan yang sesuai, mulai dari obat topical hingga prosedur medis seperti chemical peel."
+      },
+      {
+        "question": "Apakah perawatan kulit di klinik aman untuk semua jenis kulit?",
+        "answer": "Ya, dokter kami akan melakukan pemeriksaan awal untuk menentukan jenis kulit dan perawatan yang paling sesuai."
+      }
+    ]
+  },
+  {
+    "id": "srv-005",
+    "slug": "klinik-mata",
+    "name": "Klinik Mata",
+    "icon": "eye",
+    "imageUrl": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=800&auto=format&fit=crop&q=80",
+    "category": "Rawat Jalan",
+    "shortDescription": "Pemeriksaan dan pengobatan gangguan mata",
+    "description": "Klinik Mata Bahagia Medika menyediakan layanan oftalmologi lengkap untuk menjaga kesehatan penglihatan Anda. Tim dokter spesialis mata kami berpengalaman dalam penanganan katarak, glaukoma, degenerasi makula, dan gangguan refraksi.\n\nFasilitas klinik dilengkapi dengan peralatan pemeriksaan mata modern seperti tonometer, funduskopi, dan alat ukur refraksi digital. Kami juga menyediakan layanan operasi katarak dan prosedur refraktif lainnya.\n\nPemeriksaan mata rutin sangat dianjurkan untuk mendeteksi gangguan penglihatan sedini mungkin, terutama bagi penderita diabetes dan hipertensi.",
+    "benefits": [
+      "Pemeriksaan mata menyeluruh",
+      "Operasi katarak dengan teknologi modern",
+      "Deteksi dini glaukoma",
+      "Konsultasi penglihatan anak"
+    ],
+    "relatedDoctorIds": ["doc-007"],
+    "facilityIds": ["fac-007"],
+    "faq": [
+      {
+        "question": "Seberapa sering saya harus memeriksakan mata?",
+        "answer": "Untuk orang dewasa sehat, disarankan memeriksakan mata setiap 2 tahun. Untuk penderita diabetes atau hipertensi, disarankan setiap tahun."
+      },
+      {
+        "question": "Apakah klinik melayani operasi katarak?",
+        "answer": "Ya, klinik kami menyediakan layanan operasi katarak dengan teknologi fakoemulsifikasi terkini."
+      }
+    ]
+  },
+  {
+    "id": "srv-006",
+    "slug": "igd",
+    "name": "Instalasi Gawat Darurat (IGD)",
+    "icon": "siren",
+    "imageUrl": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&auto=format&fit=crop&q=80",
+    "category": "Rawat Jalan",
+    "shortDescription": "Pelayanan darurat 24 jam",
+    "description": "Instalasi Gawat Darurat (IGD) Bahagia Medika siap melayani pasien dengan kondisi darurat selama 24 jam penuh, 7 hari seminggu. Tim medis darurat kami terdiri dari dokter umum, dokter spesialis, dan paramedis yang terlatih menangani berbagai kondisi darurat.\n\nIGD kami dilengkapi dengan unit resusitasi, ruang observasi, dan peralatan medis darurat lengkap. Kami menangani kasus-kasus seperti cedera traumatis, serangan jantung, stroke, sesak napas akut, dan kondisi darurat lainnya.\n\nDengan lokasi strategis di lantai 1 gedung utama, IGD kami dapat diakses dengan mudah dan langsung memberikan pertolongan pertama bagi pasien yang membutuhkan.",
+    "benefits": [
+      "Pelayanan 24 jam non-stop",
+      "Tim medis darurat terlatih",
+      "Peralatan medis darurat lengkap",
+      "Akses langsung ke unit rawat inap"
+    ],
+    "relatedDoctorIds": [],
+    "facilityIds": ["fac-003"],
+    "faq": [
+      {
+        "question": "Kapan saya harus ke IGD?",
+        "answer": "Anda harus ke IGD jika mengalami kondisi darurat seperti nyeri dada hebat, sesak napas berat, pendarahan yang tidak terkontrol, cedera serius, atau gejala stroke."
+      },
+      {
+        "question": "Apakah IGD menerima pasien tanpa rujukan?",
+        "answer": "Ya, IGD kami menerima pasien langsung tanpa rujukan untuk kondisi darurat."
+      }
+    ]
+  },
+  {
+    "id": "srv-007",
+    "slug": "radiologi",
+    "name": "Radiologi",
+    "icon": "scan",
+    "imageUrl": "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+    "category": "Penunjang Medis",
+    "shortDescription": "Pemeriksaan pencitraan medis",
+    "description": "Departemen Radiologi Bahagia Medika menyediakan layanan pencitraan medis yang komprehensif untuk membantu diagnosis dan penanganan berbagai kondisi kesehatan. Peralatan radiologi kami meliputi CT Scan, MRI, X-Ray, dan USG dengan teknologi terkini.\n\nTim radiologi kami terdiri dari dokter spesialis radiologi yang berpengalaman dalam membaca dan menginterpretasikan hasil pencitraan medis. Hasil pemeriksaan dapat diketahui secara cepat dan akurat.\n\nLayanan radiologi kami terintegrasi dengan seluruh klinik di rumah sakit, sehingga dokter yang menangani Anda dapat segera mendapatkan hasil pemeriksaan untuk penentuan diagnosis dan langkah pengobatan selanjutnya.",
+    "benefits": [
+      "Peralatan radiologi canggih",
+      "Hasil pemeriksaan cepat dan akurat",
+      "Dokter spesialis radiologi berpengalaman",
+      "Terintegrasi dengan seluruh klinik"
+    ],
+    "relatedDoctorIds": [],
+    "facilityIds": ["fac-004"],
+    "faq": [
+      {
+        "question": "Apakah saya perlu puasa sebelum pemeriksaan CT Scan?",
+        "answer": "Tergantung jenis pemeriksaan, silakan konsultasikan dengan dokter yang merujuk Anda untuk instruksi yang tepat."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk mendapatkan hasil?",
+        "answer": "Untuk pemeriksaan standar, hasil dapat diketahui dalam 1-2 jam. Untuk pemeriksaan khusus, hasil akan tersedia dalam 1-2 hari kerja."
+      }
+    ]
+  },
+  {
+    "id": "srv-008",
+    "slug": "laboratorium",
+    "name": "Laboratorium",
+    "icon": "flask-conical",
+    "imageUrl": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80",
+    "category": "Penunjang Medis",
+    "shortDescription": "Pemeriksaan laboratorium klinis",
+    "description": "Laboratorium Bahagia Medika menyediakan layanan pemeriksaan laboratorium klinis yang akurat dan terpercaya. Kami melayani berbagai jenis pemeriksaan mulai dari darah lengkap, gula darah, fungsi hati, fungsi ginjal, hingga pemeriksaan khusus lainnya.\n\nDilengkapi dengan peralatan analisis otomatis terbaru, laboratorium kami memastikan setiap sampel diperiksa dengan standar kualitas internasional. Tenaga laboratorium kami terdiri dari teknisi laboratorium medis yang bersertifikat dan berpengalaman.\n\nHasil pemeriksaan laboratorium dapat diketahui dengan cepat, biasanya dalam waktu 1-3 jam untuk pemeriksaan standar, sehingga dokter dapat segera melakukan evaluasi dan penanganan yang diperlukan.",
+    "benefits": [
+      "Pemeriksaan laboratorium lengkap",
+      "Hasil cepat dan akurat",
+      "Peralatan analisis otomatis",
+      "Standar kualitas internasional"
+    ],
+    "relatedDoctorIds": [],
+    "facilityIds": ["fac-005"],
+    "faq": [
+      {
+        "question": "Apakah saya perlu puasa sebelum pemeriksaan darah?",
+        "answer": "Untuk beberapa pemeriksaan seperti gula darah dan kolesterol, disarankan puasa 8-12 jam sebelum pengambilan sampel. Silakan konsultasikan dengan dokter atau petugas laboratorium."
+      },
+      {
+        "question": "Bagaimana cara mendapatkan hasil pemeriksaan?",
+        "answer": "Hasil pemeriksaan dapat diambil langsung di laboratorium atau diakses melalui aplikasi Bahagia Medika."
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "test-001",
+    "patientName": "Ibu Siti Rahayu",
+    "avatarUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=face",
+    "message": "Pelayanan di Bahagia Medika sangat memuaskan. Dokter anak yang menangani anak saya sangat ramah dan profesional. Fasilitas klinik juga bersih dan nyaman. Terima kasih Bahagia Medika!",
+    "rating": 5,
+    "doctorName": "Dr. Amelia Putri, Sp.An",
+    "service": "Klinik Anak",
+    "date": "2026-08-15"
+  },
+  {
+    "id": "test-002",
+    "patientName": "Bapak Ahmad Ridwan",
+    "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "message": "Saya menjalani pemeriksaan jantung di Klinik Jantung Bahagia Medika. Proses pemeriksaan cepat dan hasilnya akurat. Dokter spesialis jantungnya menjelaskan kondisi saya dengan detail dan mudah dipahami. Sangat direkomendasikan!",
+    "rating": 5,
+    "doctorName": "Dr. Rina Wahyuni, Sp.JP",
+    "service": "Klinik Jantung",
+    "date": "2026-07-22"
+  },
+  {
+    "id": "test-003",
+    "patientName": "Ibu Dewi Lestari",
+    "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
+    "message": "Klinik Kandungan di Bahagia Medika memberikan pelayanan yang luar biasa selama kehamilan saya. Dokter kandungannya sangat perhatian dan selalu menjawab semua pertanyaan saya dengan sabar. Persalinan saya berjalan lancar. Terima kasih!",
+    "rating": 5,
+    "doctorName": "Dr. Siti Nurhaliza, Sp.OG",
+    "service": "Klinik Kandungan & Kebidanan",
+    "date": "2026-06-10"
+  },
+  {
+    "id": "test-004",
+    "patientName": "Bapak Hendra Wijaya",
+    "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    "message": "Anak saya mengalami masalah telinga dan kami dibawa ke Klinik THT Bahagia Medika. Pelayanan cepat dan dokter THT-nya sangat berpengalaman. Anak saya merasa nyaman selama pemeriksaan. Puas dengan pelayanannya!",
+    "rating": 4,
+    "doctorName": "Dr. Maria Oktaviani, Sp.THT-KL",
+    "service": "Klinik THT",
+    "date": "2026-09-01"
+  },
+  {
+    "id": "test-005",
+    "patientName": "Ibu Ratna Sari",
+    "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+    "message": "Saya melakukan pemeriksaan laboratorium di Bahagia Medika dan hasilnya cepat serta akurat. Petugas laboratorium ramah dan profesional. Lokasi rumah sakit juga mudah dijangkau dengan area parkir yang luas. Akan kembali lagi untuk pemeriksaan rutin.",
+    "rating": 4,
+    "doctorName": "Tim Laboratorium",
+    "service": "Laboratorium",
+    "date": "2026-08-28"
+  }
+]

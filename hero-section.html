@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bahagia Medika — Hero Section Rumah Sakit Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-primary: #285F75;
+      --color-primary-dark: #18313D;
+      --color-primary-light: #EAF4F6;
+      --color-secondary: #78AFC0;
+      --color-secondary-accent: #38A3BC;
+      --color-white: #FFFFFF;
+      --color-card-bg: rgba(255, 255, 255, 0.95);
+      --color-border: rgba(200, 209, 213, 0.5);
+      --color-text-primary: #18313D;
+      --color-text-secondary: #52768A;
+      --color-text-muted: #7E9CAE;
+      --color-success: #2E9E7B;
+      --color-success-light: #E6F5F0;
+      --color-error: #C94B4B;
+      --color-error-light: #FDF1F1;
+      --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Plus Jakarta Sans', 'Poppins', sans-serif;
+      --shadow-sm: 0 4px 12px rgba(24, 49, 61, 0.05);
+      --shadow-md: 0 12px 30px rgba(24, 49, 61, 0.08);
+      --shadow-lg: 0 20px 48px rgba(24, 49, 61, 0.14);
+      --shadow-cinema: 0 24px 60px rgba(12, 27, 34, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: #F8FBFC;
+      color: var(--color-text-primary);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero-wrapper {
+      position: relative;
+      background: radial-gradient(circle at 85% -10%, rgba(120, 175, 192, 0.28) 0%, rgba(244, 249, 250, 0) 55%),
+                  radial-gradient(circle at 10% 20%, rgba(40, 95, 117, 0.08) 0%, rgba(244, 249, 250, 0) 45%),
+                  linear-gradient(180deg, #FFFFFF 0%, #F5FAFB 100%);
+      min-height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ambient-grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(40, 95, 117, 0.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    /* Floating Navbar (Dribbble Glassmorphism) */
+    .hero-navbar {
+      position: relative;
+      z-index: 30;
+      max-width: 1360px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 20px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--color-primary-dark);
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(40, 95, 117, 0.28);
+    }
+
+    .brand-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--color-white);
+      stroke-width: 2.2;
+    }
+
+    .brand-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-secondary-accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--color-border);
+      padding: 8px 24px;
+      border-radius: 9999px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--color-text-secondary);
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn-emergency-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 16px;
+      border-radius: 12px;
+      background: var(--color-error-light);
+      border: 1px solid rgba(201, 75, 75, 0.2);
+      color: var(--color-error);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.2s, transform 0.15s;
+    }
+
+    .btn-emergency-nav:hover {
+      background: #fde8e8;
+      transform: translateY(-1px);
+    }
+
+    .btn-login-nav {
+      padding: 9px 20px;
+      border-radius: 12px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      font-size: 0.86rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(40, 95, 117, 0.24);
+      transition: background-color 0.2s, transform 0.15s;
+    }
+
+    .btn-login-nav:hover {
+      background: #205063;
+      transform: translateY(-1px);
+    }
+
+    /* Main Hero Stage */
+    .hero-content {
+      position: relative;
+      z-index: 20;
+      max-width: 1360px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 16px 32px 28px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    /* Left Column */
+    .hero-left-stage {
+      max-width: 640px;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: #EAF4F6;
+      border: 1px solid rgba(120, 175, 192, 0.45);
+      padding: 6px 15px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+    }
+
+    .badge-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--color-success);
+      box-shadow: 0 0 8px var(--color-success);
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 4.4vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      color: var(--color-primary-dark);
+      margin-bottom: 20px;
+    }
+
+    .headline-highlight {
+      position: relative;
+      display: inline-block;
+      color: var(--color-primary);
+    }
+
+    .headline-highlight::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: rgba(120, 175, 192, 0.3);
+      border-radius: 4px;
+      z-index: -1;
+    }
+
+    .hero-description {
+      font-size: 1.05rem;
+      line-height: 1.68;
+      color: var(--color-text-secondary);
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .hero-button-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .btn-booking-primary {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #1f4e61 100%);
+      color: var(--color-white);
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 24px rgba(40, 95, 117, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .btn-booking-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(40, 95, 117, 0.45);
+      background: linear-gradient(135deg, #2b677e 0%, #1a4252 100%);
+    }
+
+    .btn-video-watch {
+      background: var(--color-white);
+      color: var(--color-primary-dark);
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 14px;
+      border: 1px solid var(--color-border);
+      font-size: 0.92rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: var(--shadow-sm);
+      transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .btn-video-watch:hover {
+      background: var(--color-primary-light);
+      border-color: var(--color-secondary);
+      transform: translateY(-1px);
+    }
+
+    .play-circle-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-circle-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--color-white);
+      stroke: var(--color-white);
+      margin-left: 2px;
+    }
+
+    /* Social Proof Indonesian Families */
+    .hero-social-proof {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(200, 209, 213, 0.35);
+    }
+
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar-stack img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2.5px solid var(--color-white);
+      margin-left: -10px;
+      object-fit: cover;
+    }
+
+    .avatar-stack img:first-child {
+      margin-left: 0;
+    }
+
+    .proof-copy {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      line-height: 1.35;
+    }
+
+    .proof-copy strong {
+      color: var(--color-primary-dark);
+      font-weight: 700;
+    }
+
+    /* Quick Booking Form */
+    .quick-booking-card {
+      background: var(--color-card-bg);
+      backdrop-filter: blur(20px);
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 16px 20px;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 1.1fr 1.1fr 0.9fr auto;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .search-filter-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-right: 1px solid rgba(200, 209, 213, 0.4);
+      padding-right: 12px;
+    }
+
+    .search-filter-item:last-of-type {
+      border-right: none;
+    }
+
+    .filter-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .filter-label svg {
+      width: 12px;
+      height: 12px;
+      stroke: var(--color-secondary-accent);
+    }
+
+    .filter-select {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      cursor: pointer;
+    }
+
+    .btn-search-schedule {
+      background: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 16px rgba(40, 95, 117, 0.28);
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .btn-search-schedule:hover {
+      background: #205063;
+      transform: translateY(-1px);
+    }
+
+    /* Right Column: Indonesian Hospital Video Frame */
+    .hero-right-stage {
+      position: relative;
+    }
+
+    .cinema-viewport-frame {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: var(--shadow-cinema);
+      border: 8px solid rgba(255, 255, 255, 0.88);
+      background-color: #0b171c;
+    }
+
+    .hero-video-item {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 1.1s cubic-bezier(0.4, 0, 0.2, 1), transform 8s ease-out;
+      pointer-events: none;
+    }
+
+    .hero-video-item.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .video-color-wash {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(24, 49, 61, 0.25) 0%, rgba(24, 49, 61, 0.08) 35%, rgba(12, 24, 30, 0.92) 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Indonesian Ambulance Emergency Flash Accent on Scene 0 */
+    .ambulance-light-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.5s;
+      background: radial-gradient(circle at 80% 20%, rgba(201, 75, 75, 0.25) 0%, transparent 40%),
+                  radial-gradient(circle at 20% 15%, rgba(56, 163, 188, 0.25) 0%, transparent 40%);
+    }
+
+    .ambulance-light-glow.active {
+      opacity: 1;
+      animation: flash-strobe 2.2s infinite ease-in-out;
+    }
+
+    @keyframes flash-strobe {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.85; }
+    }
+
+    /* In-Video HUD Header */
+    .video-inner-hud {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 5;
+    }
+
+    .live-scene-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(14, 27, 34, 0.78);
+      backdrop-filter: blur(12px);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: var(--color-white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .live-pulse {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--color-error);
+      box-shadow: 0 0 8px var(--color-error);
+      animation: pulse-dot 1.5s infinite;
+    }
+
+    .video-deck-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(14, 27, 34, 0.68);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .video-deck-btn:hover {
+      background: rgba(14, 27, 34, 0.95);
+      transform: scale(1.05);
+    }
+
+    .video-deck-btn svg {
+      width: 15px;
+      height: 15px;
+      stroke: var(--color-white);
+      fill: none;
+    }
+
+    /* In-Video Bottom Description & Scene Switcher */
+    .video-bottom-hud {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      z-index: 5;
+    }
+
+    .scene-caption-block {
+      margin-bottom: 12px;
+    }
+
+    .scene-badge-micro {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--color-secondary);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .scene-caption-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--color-white);
+      margin-bottom: 4px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      line-height: 1.3;
+    }
+
+    .scene-caption-desc {
+      font-size: 0.8rem;
+      color: rgba(220, 238, 243, 0.92);
+      line-height: 1.45;
+      max-width: 450px;
+      font-weight: 300;
+    }
+
+    /* Multi-Scene Mini Pill Switcher */
+    .scene-switcher-mini {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .mini-scene-pill {
+      background: rgba(14, 27, 34, 0.72);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 10px;
+      padding: 8px 10px;
+      color: rgba(255, 255, 255, 0.75);
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .mini-scene-pill.active {
+      background: rgba(40, 95, 117, 0.92);
+      color: var(--color-white);
+      border-color: var(--color-secondary);
+    }
+
+    .mini-progress-rail {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2.5px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .mini-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--color-secondary);
+      transition: width 0.1s linear;
+    }
+
+    /* Dribbble Floating Micro-Cards (Layered) */
+    .floating-badge {
+      position: absolute;
+      z-index: 10;
+      background: var(--color-card-bg);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 18px;
+      box-shadow: var(--shadow-lg);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      animation: float-slow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes float-slow {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    /* Card 1: Dokter Spesialis Indonesia */
+    .float-card-doctor {
+      top: -18px;
+      left: -24px;
+      animation-delay: 0s;
+    }
+
+    .doctor-thumb {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .card-meta-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      line-height: 1.2;
+    }
+
+    .card-meta-sub {
+      font-size: 0.72rem;
+      color: var(--color-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 2px;
+    }
+
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      color: #C68A00;
+      font-weight: 700;
+    }
+
+    .rating-badge svg {
+      width: 12px;
+      height: 12px;
+      fill: #F3B724;
+      stroke: #F3B724;
+    }
+
+    /* Card 2: Asisten Medika Care 24 Jam */
+    .float-card-assistant {
+      bottom: 24px;
+      right: -24px;
+      animation-delay: 1.5s;
+    }
+
+    .assistant-icon-ring {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(120, 175, 192, 0.4);
+    }
+
+    .assistant-icon-ring svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--color-white);
+      stroke-width: 2.2;
+    }
+
+    /* Card 3: Standar Kemenkes RI & Akreditasi */
+    .float-card-stat {
+      bottom: -18px;
+      left: 20px;
+      animation-delay: 0.8s;
+      padding: 10px 16px;
+    }
+
+    .stat-ring {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--color-success-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .stat-ring svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--color-success);
+      stroke-width: 2.2;
+    }
+
+    .stat-num-text {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--color-primary-dark);
+      line-height: 1.1;
+    }
+
+    .stat-lbl-text {
+      font-size: 0.68rem;
+      color: var(--color-text-secondary);
+    }
+
+    @media (max-width: 1100px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-left-stage {
+        max-width: 100%;
+      }
+      .quick-booking-card {
+        grid-template-columns: 1fr 1fr;
+      }
+      .btn-search-schedule {
+        grid-column: span 2;
+        justify-content: center;
+      }
+      .float-card-doctor { left: 0; }
+      .float-card-assistant { right: 0; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero-navbar { padding: 18px 20px; }
+      .hero-content { padding: 12px 20px 24px; }
+      .hero-headline { font-size: 2.3rem; }
+      .quick-booking-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .search-filter-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(200, 209, 213, 0.4);
+        padding-bottom: 8px;
+      }
+      .btn-search-schedule {
+        grid-column: span 1;
+      }
+      .floating-badge {
+        display: none;
+      }
+    }
+
+    /* Medika Care Floating Launcher & Chat Window */
+    .floating-chat-trigger {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 1000;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 10px 25px rgba(40, 95, 117, 0.45);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+    }
+    .floating-chat-trigger:hover {
+      transform: scale(1.08);
+      background: var(--color-primary-dark);
+    }
+    .chat-launcher-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: var(--color-success);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 12px;
+      border: 2px solid #fff;
+    }
+    .medika-chat-modal {
+      position: fixed;
+      bottom: 90px;
+      right: 24px;
+      z-index: 1001;
+      width: 380px;
+      max-width: calc(100vw - 32px);
+      height: 540px;
+      max-height: calc(100vh - 120px);
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(14, 27, 34, 0.25);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid rgba(120, 175, 192, 0.3);
+      animation: modalSlideUp 0.25s ease-out;
+    }
+    @keyframes modalSlideUp {
+      from { opacity: 0; transform: translateY(16px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .chat-modal-header {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: #ffffff;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .chat-header-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .chat-close-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #ffffff;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .chat-close-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    .chat-messages-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #F8FAFC;
+    }
+    .chat-msg-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-width: 90%;
+    }
+    .chat-msg-row.bot {
+      align-self: flex-start;
+    }
+    .chat-msg-row.user {
+      align-self: flex-end;
+      align-items: flex-end;
+    }
+    .chat-bubble {
+      padding: 10px 14px;
+      border-radius: 16px;
+      font-size: 13px;
+      line-height: 1.5;
+      white-space: pre-line;
+    }
+    .chat-bubble.bot {
+      background: #ffffff;
+      color: var(--color-text-main);
+      border: 1px solid rgba(200, 209, 213, 0.5);
+      border-bottom-left-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+    .chat-bubble.user {
+      background: var(--color-primary);
+      color: #ffffff;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-quick-replies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .chat-qr-btn {
+      background: #ffffff;
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .chat-qr-btn:hover {
+      background: var(--color-primary-surface);
+      border-color: var(--color-primary-dark);
+      color: var(--color-primary-dark);
+    }
+    .chat-qr-btn.cta-primary {
+      background: var(--color-primary);
+      color: #ffffff;
+      border-color: var(--color-primary);
+    }
+    .chat-qr-btn.cta-primary:hover {
+      background: var(--color-primary-dark);
+    }
+    .chat-input-row {
+      padding: 12px;
+      background: #ffffff;
+      border-top: 1px solid rgba(200, 209, 213, 0.5);
+      display: flex;
+      gap: 8px;
+    }
+    .chat-input-row input {
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 13px;
+      border: 1px solid rgba(200, 209, 213, 0.8);
+      border-radius: 10px;
+      outline: none;
+      font-family: inherit;
+    }
+    .chat-input-row input:focus {
+      border-color: var(--color-primary);
+    }
+    .chat-send-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--color-primary);
+      color: #ffffff;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .chat-send-btn:hover {
+      background: var(--color-primary-dark);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-wrapper">
+    <div class="ambient-grid"></div>
+
+    <!-- Floating Navbar -->
+    <header class="hero-navbar">
+      <a href="/" class="brand-logo">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M2 12h20"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="brand-title">Bahagia Medika</div>
+          <div class="brand-subtitle">Rumah Sakit Indonesia</div>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/" class="active">Beranda</a></li>
+        <li><a href="/dokter">Dokter Spesialis</a></li>
+        <li><a href="/layanan">Poliklinik & IGD</a></li>
+        <li><a href="/jadwal">Jadwal Praktik</a></li>
+        <li><a href="/fasilitas">Kamar Bedah & Rawat Inap</a></li>
+        <li><a href="/tentang">Profil RS</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:02112349999" class="btn-emergency-nav">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>IGD 24 Jam: (021) 1234-9999</span>
+        </a>
+        <a href="/login" class="btn-login-nav">Portal Pasien</a>
+      </div>
+    </header>
+
+    <!-- Main Hero Stage -->
+    <main class="hero-content">
+      
+      <!-- Left Column: Copywriting & Action -->
+      <div class="hero-left-stage">
+        <div class="hero-badge-pill">
+          <div class="badge-status-dot"></div>
+          <span>Akreditasi Kemenkes RI — Standar Layanan Kesehatan Nasional</span>
+        </div>
+
+        <h1 class="hero-headline">
+          Pelayanan Medis Terbaik untuk Keluarga <span class="headline-highlight">Indonesia</span>
+        </h1>
+
+        <p class="hero-description">
+          Bahagia Medika menghadirkan kolaborasi dokter spesialis berpengalaman anggota IDI, armada ambulans gawat darurat siaga 24 jam, kamar bedah modern berstandar internasional, serta kenyamanan ruang rawat inap keluarga yang ramah dan menenangkan.
+        </p>
+
+        <div class="hero-button-row">
+          <a href="/buat-janji" class="btn-booking-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            <span>Daftar Janji Temu Dokter</span>
+          </a>
+
+          <a href="#video-tour" class="btn-video-watch">
+            <div class="play-circle-icon">
+              <svg viewBox="0 0 24 24">
+                <polygon points="6 4 20 12 6 20 6 4"></polygon>
+              </svg>
+            </div>
+            <span>Tur RS Indonesia</span>
+          </a>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="hero-social-proof">
+          <div class="avatar-stack">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Pasien Indonesia" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Pasien Indonesia" />
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop" alt="Pasien Indonesia" />
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=100&h=100&fit=crop" alt="Pasien Indonesia" />
+          </div>
+          <div class="proof-copy">
+            <div><strong>50.000+ Pasien & Keluarga</strong> telah mempercayakan perawatannya</div>
+            <div style="font-size: 0.78rem; color: var(--color-text-muted);">Menerima pasien mandiri, asuransi swasta, dan rujukan nasional</div>
+          </div>
+        </div>
+
+        <!-- Quick Booking Bar -->
+        <form class="quick-booking-card" onsubmit="event.preventDefault(); window.location.href='/dokter?search=' + encodeURIComponent(document.getElementById('specialtySelect').value);">
+          <div class="search-filter-item">
+            <span class="filter-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+                <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+                <circle cx="20" cy="10" r="2"></circle>
+              </svg>
+              Dokter Spesialis
+            </span>
+            <select class="filter-select" id="specialtySelect">
+              <option value="">Semua Dokter Spesialis (IDI)</option>
+              <option value="Anak">Spesialis Anak (Sp.A)</option>
+              <option value="Jantung">Spesialis Jantung & Pembuluh Darah (Sp.JP)</option>
+              <option value="Kandungan">Kebidanan & Kandungan (Sp.OG)</option>
+              <option value="Penyakit Dalam">Spesialis Penyakit Dalam (Sp.PD)</option>
+              <option value="Bedah">Spesialis Bedah Umum & Subspesialis (Sp.B)</option>
+              <option value="Saraf">Spesialis Saraf (Sp.S)</option>
+            </select>
+          </div>
+
+          <div class="search-filter-item">
+            <span class="filter-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Hari Praktik
+            </span>
+            <select class="filter-select">
+              <option>Hari Ini (Praktik Aktif)</option>
+              <option>Besok Pagi / Sore</option>
+              <option>Jadwal Lengkap Senin - Sabtu</option>
+            </select>
+          </div>
+
+          <div class="search-filter-item">
+            <span class="filter-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+              Poliklinik
+            </span>
+            <select class="filter-select">
+              <option>Poliklinik Reguler RS</option>
+              <option>Poliklinik Eksekutif</option>
+              <option>Telekonsultasi Medika Care</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-search-schedule">
+            <span>Cari Jadwal</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Right Column: 4 Indonesian Hospital Cinematic Scenes -->
+      <div class="hero-right-stage" id="video-tour">
+        
+        <!-- Floating Doctor Card (Indonesia doctor vibe) -->
+        <div class="floating-badge float-card-doctor">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=120&h=120&fit=crop" class="doctor-thumb" alt="dr. Tirta Pratama Sp.A" />
+          <div>
+            <div class="card-meta-title">dr. Tirta Pratama, Sp.A</div>
+            <div class="card-meta-sub">
+              <span>Spesialis Anak • FK UI / IDI</span>
+              <span>•</span>
+              <span class="rating-badge">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                4.9/5
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Medika Care Card -->
+        <div class="floating-badge float-card-assistant" id="openMedikaCareBtn" style="cursor: pointer;" title="Klik untuk konsultasi dengan Medika Care">
+          <div class="assistant-icon-ring">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="card-meta-title">Medika Care Assistant</div>
+            <div class="card-meta-sub" style="color: var(--color-success); font-weight: 600;">
+              <span class="badge-status-dot" style="width:6px; height:6px;"></span>
+              Siap Pandu Pasien 24 Jam
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Indonesian Hospital Accreditation Badge -->
+        <div class="floating-badge float-card-stat">
+          <div class="stat-ring">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="stat-num-text">Akreditasi Paripurna</div>
+            <div class="stat-lbl-text">KARS & Kemenkes RI</div>
+          </div>
+        </div>
+
+        <!-- Main Video Viewport -->
+        <div class="cinema-viewport-frame">
+          <div class="video-color-wash"></div>
+          <div class="ambulance-light-glow active" id="ambulanceGlow"></div>
+
+          <!-- Scene 01: Ambulans Gawat Darurat RS Bahagia Medika Jakarta -->
+          <div class="hero-video-item active" id="scene-0" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+            <iframe
+              id="yt-iframe-0"
+              src="https://www.youtube-nocookie.com/embed/CmABnKuKvyo?autoplay=1&mute=1&loop=1&playlist=CmABnKuKvyo&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              title="Ambulans Gawat Darurat RS Bahagia Medika Jakarta"
+              style="position: absolute; top: 50%; left: 50%; width: 140%; height: 140%; transform: translate(-50%, -50%); border: 0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </div>
+
+          <!-- Scene 02: Kesiapsiagaan Tim Dokter IGD RS Bahagia Medika Jakarta -->
+          <div class="hero-video-item" id="scene-1" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+            <iframe
+              id="yt-iframe-1"
+              src="https://www.youtube-nocookie.com/embed/rp_myVO-EzM?autoplay=1&mute=1&loop=1&playlist=rp_myVO-EzM&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              title="IGD RS Bahagia Medika Jakarta Siap 24 Jam"
+              style="position: absolute; top: 50%; left: 50%; width: 140%; height: 140%; transform: translate(-50%, -50%); border: 0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </div>
+
+          <!-- Scene 03: Kamar Bedah Modern RS Bahagia Medika Jakarta -->
+          <div class="hero-video-item" id="scene-2" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+            <iframe
+              id="yt-iframe-2"
+              src="https://www.youtube-nocookie.com/embed/tSM_epOAEzc?autoplay=1&mute=1&loop=1&playlist=tSM_epOAEzc&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              title="Kamar Bedah Modern RS Bahagia Medika Jakarta"
+              style="position: absolute; top: 50%; left: 50%; width: 140%; height: 140%; transform: translate(-50%, -50%); border: 0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </div>
+
+          <!-- Scene 04: CT-Scan Modern RS Bahagia Medika Jakarta -->
+          <div class="hero-video-item" id="scene-3" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+            <iframe
+              id="yt-iframe-3"
+              src="https://www.youtube-nocookie.com/embed/a4YGQBI_Dcs?autoplay=1&mute=1&loop=1&playlist=a4YGQBI_Dcs&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+              title="CT-Scan Modern RS Bahagia Medika Jakarta"
+              style="position: absolute; top: 50%; left: 50%; width: 140%; height: 140%; transform: translate(-50%, -50%); border: 0;"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
+          </div>
+
+          <!-- Top Video HUD -->
+          <div class="video-inner-hud">
+            <div class="live-scene-tag">
+              <div class="live-pulse"></div>
+              <span id="activeSceneCode">SCENE 01 • AMBULANS GAWAT DARURAT</span>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+              <button class="video-deck-btn" id="playToggleBtn" title="Play/Pause">
+                <svg id="pauseSvg" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                <svg id="playSvg" style="display:none;" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </button>
+              <button class="video-deck-btn" id="muteToggleBtn" title="Toggle Audio">
+                <svg id="mutedSvg" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+                <svg id="unmutedSvg" style="display:none;" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Bottom Video Description & Indonesian Scene Navigation -->
+          <div class="video-bottom-hud">
+            <div class="scene-caption-block">
+              <div class="scene-badge-micro" id="sceneBadgeMicro">INSTALASI GAWAT DARURAT (IGD 24 JAM)</div>
+              <div class="scene-caption-title" id="sceneCaptionTitle">Armada Ambulans & Tim Gawat Darurat Bahagia Medika Jakarta</div>
+              <div class="scene-caption-desc" id="sceneCaptionDesc">
+                Armada ambulans siaga 24 jam dengan sistem navigasi terpadu dan tim medis darurat di garis depan RS Bahagia Medika Jakarta.
+              </div>
+            </div>
+
+            <div class="scene-switcher-mini">
+              <button class="mini-scene-pill active" data-scene="0">
+                <span>01 Ambulans Bahagia</span>
+                <div class="mini-progress-rail"><div class="mini-progress-fill" id="rail-0"></div></div>
+              </button>
+              <button class="mini-scene-pill" data-scene="1">
+                <span>02 IGD Siaga 24 Jam</span>
+                <div class="mini-progress-rail"><div class="mini-progress-fill" id="rail-1"></div></div>
+              </button>
+              <button class="mini-scene-pill" data-scene="2">
+                <span>03 Kamar Bedah Modern</span>
+                <div class="mini-progress-rail"><div class="mini-progress-fill" id="rail-2"></div></div>
+              </button>
+              <button class="mini-scene-pill" data-scene="3">
+                <span>04 Radiologi CT-Scan</span>
+                <div class="mini-progress-rail"><div class="mini-progress-fill" id="rail-3"></div></div>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <script>
+    const SCENES = [
+      {
+        code: 'SCENE 01 • AMBULANS GAWAT DARURAT',
+        badge: 'INSTALASI GAWAT DARURAT (IGD 24 JAM)',
+        title: 'Armada Ambulans & Tim Gawat Darurat Bahagia Medika Jakarta',
+        desc: 'Armada ambulans siaga 24 jam dengan sistem navigasi terpadu dan tim medis darurat di garis depan RS Bahagia Medika Jakarta.',
+        duration: 8000
+      },
+      {
+        code: 'SCENE 02 • TIM MEDIS IGD SIAGA',
+        badge: 'DOKTER JAGA & TRIAGE 24 JAM',
+        title: 'Kesiapsiagaan Tim Dokter & IGD 24 Jam RS Bahagia Medika Jakarta',
+        desc: 'Respons cepat tim medis darurat dan dokter jaga spesialis 24 jam dalam menangani pasien kondisi darurat di RS Bahagia Medika Jakarta.',
+        duration: 8000
+      },
+      {
+        code: 'SCENE 03 • BEDAH & OPERASI MODERN',
+        badge: 'KAMAR BEDAH TERPADU',
+        title: 'Kamar Operasi & Bedah Modern RS Bahagia Medika Jakarta',
+        desc: 'Prosedur bedah modern dengan instrumen sterilisasi canggih berstandar internasional dan tim spesialis bedah di RS Bahagia Medika Jakarta.',
+        duration: 8000
+      },
+      {
+        code: 'SCENE 04 • RADIOLOGI & CT-SCAN',
+        badge: 'DIAGNOSTIK & RADIOLOGI DIGITAL',
+        title: 'Deteksi Dini & Fasilitas CT-Scan Modern RS Bahagia Medika Jakarta',
+        desc: 'Pemeriksaan diagnostik radiologi & CT-Scan multi-slice mutakhir untuk deteksi dini penyakit secara presisi di RS Bahagia Medika Jakarta.',
+        duration: 8000
+      }
+    ];
+
+    let currentScene = 0;
+    let isPlaying = true;
+    let isMuted = true;
+    let startTime = Date.now();
+    let animId = null;
+
+    const videos = [
+      document.getElementById('scene-0'),
+      document.getElementById('scene-1'),
+      document.getElementById('scene-2'),
+      document.getElementById('scene-3')
+    ];
+
+    const fills = [
+      document.getElementById('rail-0'),
+      document.getElementById('rail-1'),
+      document.getElementById('rail-2'),
+      document.getElementById('rail-3')
+    ];
+
+    const pills = document.querySelectorAll('.mini-scene-pill');
+    const sceneBadgeMicro = document.getElementById('sceneBadgeMicro');
+    const sceneTitle = document.getElementById('sceneCaptionTitle');
+    const sceneDesc = document.getElementById('sceneCaptionDesc');
+    const activeCode = document.getElementById('activeSceneCode');
+    const ambulanceGlow = document.getElementById('ambulanceGlow');
+    const playBtn = document.getElementById('playToggleBtn');
+    const muteBtn = document.getElementById('muteToggleBtn');
+    const playSvg = document.getElementById('playSvg');
+    const pauseSvg = document.getElementById('pauseSvg');
+    const mutedSvg = document.getElementById('mutedSvg');
+    const unmutedSvg = document.getElementById('unmutedSvg');
+
+    function changeScene(index) {
+      if (index === currentScene && videos[currentScene].classList.contains('active')) return;
+
+      videos.forEach((v, i) => {
+        if (i === index) {
+          v.classList.add('active');
+          if (v.currentTime !== undefined) v.currentTime = 0;
+          if (isPlaying && v.play) v.play().catch(() => {});
+        } else {
+          v.classList.remove('active');
+          if (v.pause) v.pause();
+        }
+      });
+
+      pills.forEach((p, i) => {
+        p.classList.toggle('active', i === index);
+        if (i !== index) {
+          fills[i].style.width = i < index ? '100%' : '0%';
+        }
+      });
+
+      const data = SCENES[index];
+      activeCode.textContent = data.code;
+      sceneBadgeMicro.textContent = data.badge;
+      sceneTitle.textContent = data.title;
+      sceneDesc.textContent = data.desc;
+
+      if (index === 0) {
+        ambulanceGlow.classList.add('active');
+      } else {
+        ambulanceGlow.classList.remove('active');
+      }
+
+      currentScene = index;
+      startTime = Date.now();
+    }
+
+    function runSequence() {
+      if (isPlaying) {
+        const scene = SCENES[currentScene];
+        const elapsed = Date.now() - startTime;
+        const pct = Math.min((elapsed / scene.duration) * 100, 100);
+
+        fills[currentScene].style.width = pct + '%';
+
+        if (elapsed >= scene.duration) {
+          const next = (currentScene + 1) % SCENES.length;
+          changeScene(next);
+        }
+      }
+      animId = requestAnimationFrame(runSequence);
+    }
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const idx = parseInt(pill.getAttribute('data-scene'), 10);
+        changeScene(idx);
+      });
+    });
+
+    playBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        videos[currentScene].play().catch(() => {});
+        startTime = Date.now() - ((parseFloat(fills[currentScene].style.width) || 0) / 100) * SCENES[currentScene].duration;
+        playSvg.style.display = 'none';
+        pauseSvg.style.display = 'block';
+      } else {
+        videos[currentScene].pause();
+        playSvg.style.display = 'block';
+        pauseSvg.style.display = 'none';
+      }
+    });
+
+    muteBtn.addEventListener('click', () => {
+      isMuted = !isMuted;
+      videos.forEach(v => { v.muted = isMuted; });
+      if (isMuted) {
+        mutedSvg.style.display = 'block';
+        unmutedSvg.style.display = 'none';
+      } else {
+        mutedSvg.style.display = 'none';
+        unmutedSvg.style.display = 'block';
+        videos[currentScene].play().catch(() => {});
+      }
+    });
+
+    videos[0].play().catch(() => {});
+    animId = requestAnimationFrame(runSequence);
+
+    // Medika Care Chatbot Interactive Logic
+    const chatModal = document.getElementById('medikaChatModal');
+    const openChatBtn = document.getElementById('floatingChatLauncher');
+    const openCardBtn = document.getElementById('openMedikaCareBtn');
+    const closeChatBtn = document.getElementById('closeChatModalBtn');
+    const chatMessages = document.getElementById('chatMessagesBody');
+    const chatInput = document.getElementById('chatTextInput');
+    const chatSendBtn = document.getElementById('chatSendBtn');
+
+    function toggleChat(show) {
+      if (typeof show === 'boolean') {
+        chatModal.style.display = show ? 'flex' : 'none';
+      } else {
+        chatModal.style.display = chatModal.style.display === 'none' ? 'flex' : 'none';
+      }
+      if (chatModal.style.display === 'flex') {
+        chatInput.focus();
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+    }
+
+    if (openChatBtn) openChatBtn.addEventListener('click', () => toggleChat(true));
+    if (openCardBtn) openCardBtn.addEventListener('click', () => toggleChat(true));
+    if (closeChatBtn) closeChatBtn.addEventListener('click', () => toggleChat(false));
+
+    function appendUserMessage(text) {
+      const row = document.createElement('div');
+      row.className = 'chat-msg-row user';
+      row.innerHTML = `<div class="chat-bubble user">${text}</div>`;
+      chatMessages.appendChild(row);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function appendBotResponse(text, quickReplies = []) {
+      const row = document.createElement('div');
+      row.className = 'chat-msg-row bot';
+      
+      let qrHtml = '';
+      if (quickReplies && quickReplies.length > 0) {
+        qrHtml = '<div class="chat-quick-replies">' +
+          quickReplies.map(qr => {
+            const isCta = qr.includes('↗');
+            return `<button class="chat-qr-btn ${isCta ? 'cta-primary' : ''}" onclick="handleChatOption('${qr}')">${qr}</button>`;
+          }).join('') +
+          '</div>';
+      }
+
+      row.innerHTML = `<div class="chat-bubble bot">${text}</div>${qrHtml}`;
+      chatMessages.appendChild(row);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    window.handleChatOption = function(option) {
+      // External links / explicit CTAs
+      if (option.includes('Buka Direktori Dokter') || option.includes('Buka Halaman Dokter')) {
+        window.location.href = '/dokter';
+        return;
+      }
+      if (option.includes('Buka Daftar Layanan') || option.includes('Buka Halaman Layanan')) {
+        window.location.href = '/layanan';
+        return;
+      }
+      if (option.includes('Buka Formulir Buat Janji')) {
+        window.location.href = '/buat-janji';
+        return;
+      }
+      if (option.includes('Buka Live Chat Petugas')) {
+        window.location.href = '/dashboard/chat';
+        return;
+      }
+      if (option.includes('Telepon CS') || option.includes('Telepon Front Office')) {
+        window.location.href = 'tel:02112345678';
+        return;
+      }
+      if (option.includes('Hubungi IGD 24 Jam') || option.includes('Hubungi IGD')) {
+        window.location.href = 'tel:02112349999';
+        return;
+      }
+
+      // In-chat options: DO NOT navigate away! Show information and follow-up CTA!
+      appendUserMessage(option);
+
+      setTimeout(() => {
+        const lower = option.toLowerCase();
+        
+        if (lower.includes('cari dokter') || lower.includes('spesialis')) {
+          if (lower.includes('anak')) {
+            appendBotResponse(
+              'Informasi Dokter Spesialis Anak RS Bahagia Medika Jakarta:\n\n• dr. Tirta Pratama, Sp.A (Praktik: Senin - Kamis, 09.00 - 13.00 WIB)\n• dr. Anita Wijaya, Sp.A (Praktik: Selasa - Jumat, 14.00 - 18.00 WIB)\n\nDokter spesialis anak kami melayani konsultasi tumbuh kembang anak, imunisasi lengkap, serta penanganan penyakit infeksi anak.\n\nApakah Anda ingin dibantu membuat janji temu dengan dokter anak?',
+              ['Buka Formulir Buat Janji ↗', 'Buka Direktori Dokter ↗', 'Cari Layanan', 'Kembali ke Menu']
+            );
+          } else if (lower.includes('jantung')) {
+            appendBotResponse(
+              'Informasi Dokter Spesialis Jantung RS Bahagia Medika Jakarta:\n\n• dr. Hendra Setiawan, Sp.JP(K), FIHA (Praktik: Senin - Rabu, 10.00 - 14.00 WIB)\n\nDidukung fasilitas diagnostik EKG, Echocardiography, serta Treadmill Test berstandar internasional.\n\nApakah Anda ingin dibantu reservasi jadwal dokter jantung?',
+              ['Buka Formulir Buat Janji ↗', 'Buka Direktori Dokter ↗', 'Cari Layanan', 'Kembali ke Menu']
+            );
+          } else {
+            appendBotResponse(
+              'Informasi Dokter Spesialis RS Bahagia Medika Jakarta:\n\nRS Bahagia Medika memiliki lebih dari 30 dokter spesialis dan subspesialis terakreditasi KARS Paripurna & IDI yang berpraktik setiap hari:\n• Spesialis Anak & Tumbuh Kembang\n• Spesialis Penyakit Dalam & Konsultan\n• Spesialis Jantung & Pembuluh Darah\n• Spesialis Bedah Umum & Bedah Ortopedi Modern\n• Spesialis Kebidanan & Kandungan (Obgyn)\n• Spesialis Radiologi, Mata, Saraf, & Gigi\n\nSeluruh dokter kami berpraktik dengan sistem antrean online terpadu sehingga waktu tunggu pasien lebih efisien.\n\nApakah Anda ingin saya bantu mencarikan dokter spesialis tertentu atau ingin membuka jadwal lengkap?',
+              ['Bantu Cari Spesialis Anak', 'Bantu Cari Dokter Jantung', 'Buka Direktori Dokter ↗', 'Buka Formulir Buat Janji ↗', 'Kembali ke Menu']
+            );
+          }
+        } else if (lower.includes('cari layanan') || lower.includes('layanan')) {
+          if (lower.includes('bedah')) {
+            appendBotResponse(
+              'Informasi Kamar Bedah & Operasi RS Bahagia Medika Jakarta:\n\nKamar Operasi Modern RS Bahagia Medika dilengkapi sistem tata udara HEPA Filter bertekanan positif, laparoskopi invasif minimal, serta tim bedah multidisiplin siaga 24 jam.\n\nApakah Anda memerlukan bantuan terkait jadwal tindakan atau konsultasi pra-bedah?',
+              ['Buka Formulir Buat Janji ↗', 'Buka Daftar Layanan ↗', 'Hubungi Customer Service', 'Kembali ke Menu']
+            );
+          } else if (lower.includes('rawat inap') || lower.includes('inap')) {
+            appendBotResponse(
+              'Informasi Ruang Rawat Inap RS Bahagia Medika Jakarta:\n\nTersedia pilihan kamar rawat inap yang nyaman dan higienis:\n• Ruang Kelas 1, 2, dan 3\n• Ruang VIP & VVIP Private Suite\n• Ruang Perawatan Intensif (ICU, ICCU, HCU, NICU)\nSeluruh kamar didukung pemantauan perawat 24 jam dan fasilitas pendamping pasien.\n\nApakah Anda ingin dibantu informasi ketersediaan kamar atau asuransi rekanan?',
+              ['Hubungi Customer Service', 'Buka Daftar Layanan ↗', 'Kembali ke Menu']
+            );
+          } else {
+            appendBotResponse(
+              'Informasi Fasilitas & Layanan Unggulan RS Bahagia Medika Jakarta:\n\nKami menyediakan layanan medis terpadu dan modern:\n• Instalasi Gawat Darurat (IGD) & Ambulans Siaga 24 Jam\n• Kamar Operasi & Bedah Modern Terpadu\n• Radiologi Diagnostik & Multi-slice CT-Scan Akurat\n• Rawat Inap Berstandar Kelas 1 hingga VVIP & ICU/HCU\n• Laboratorium Patologi Klinis 24 Jam\n• Poliklinik Rawat Jalan Spesialis & Farmasi 24 Jam\n\nApakah Anda ingin saya bantu menemukan layanan yang sesuai dengan keluhan kesehatan Anda?',
+              ['Bantu Cari Kamar Bedah', 'Bantu Cari Rawat Inap', 'Buka Daftar Layanan ↗', 'Buka Formulir Buat Janji ↗', 'Kembali ke Menu']
+            );
+          }
+        } else if (lower.includes('buat janji') || lower.includes('reservasi') || lower.includes('booking')) {
+          appendBotResponse(
+            'Informasi Alur Pendaftaran & Janji Temu Dokter:\n\nProsedur reservasi konsultasi di RS Bahagia Medika Jakarta:\n1. Pilih poliklinik dan nama dokter spesialis yang dituju.\n2. Tentukan tanggal konsultasi dan sesi jam praktik dokter.\n3. Masukkan data pasien (No. Rekam Medis untuk pasien lama, atau NIK untuk pasien baru).\n4. Pilih metode pembayaran (Pribadi/Mandiri, Asuransi Rekanan Swasta, atau BPJS Kesehatan).\n5. Dapatkan nomor tiket antrean digital resmi via WhatsApp/SMS tanpa antre panjang di rumah sakit.\n\nApakah Anda ingin saya bantu proses pembuatan janji temu dokter sekarang?',
+            ['Buka Formulir Buat Janji ↗', 'Cari Dokter Dulu', 'Hubungi Customer Service', 'Kembali ke Menu']
+          );
+        } else if (lower.includes('customer service') || lower.includes('cs') || lower.includes('kontak') || lower.includes('telepon')) {
+          appendBotResponse(
+            'Informasi Customer Care & Kontak Bantuan RS Bahagia Medika Jakarta:\n\nTim Customer Care kami siap membantu pertanyaan pendaftaran, verifikasi rujukan asuransi, estimasi biaya tindakan, maupun informasi rawat inap:\n• Telepon Front Office: (021) 1234-5678\n• WhatsApp Care: 0812-3456-7890\n• Jam Pelayanan CS: Setiap Hari (07.00 - 21.00 WIB)\n• Lokasi: Front Office Lobby Utama Lantai 1, RS Bahagia Medika Jakarta\n• Khusus Situasi Darurat / Kritis (IGD 24 Jam): (021) 1234-9999\n\nApakah Anda ingin saya bantu hubungkan ke live chat petugas atau kontak lainnya?',
+            ['Buka Live Chat Petugas ↗', 'Telepon CS (021) 1234-5678', 'Hubungi IGD 24 Jam', 'Kembali ke Menu']
+          );
+        } else {
+          // Menu default
+          appendBotResponse(
+            'Halo, saya Medika Care, asisten virtual RS Bahagia Medika Jakarta. Silakan pilih informasi yang ingin Anda ketahui seputar layanan rumah sakit:',
+            ['Cari Dokter', 'Cari Layanan', 'Buat Janji', 'Hubungi Customer Service']
+          );
+        }
+      }, 400);
+    };
+
+    if (chatSendBtn && chatInput) {
+      const handleSendInput = () => {
+        const text = chatInput.value.trim();
+        if (!text) return;
+        chatInput.value = '';
+        window.handleChatOption(text);
+      };
+      chatSendBtn.addEventListener('click', handleSendInput);
+      chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleSendInput();
+        }
+      });
+    }
+  </script>
+
+  <!-- Floating Medika Care Trigger Bubble -->
+  <button id="floatingChatLauncher" class="floating-chat-trigger" title="Buka Asisten Medika Care">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="chat-launcher-badge">Online</span>
+  </button>
+
+  <!-- Medika Care Chat Modal Window -->
+  <div id="medikaChatModal" class="medika-chat-modal" style="display: none;">
+    <div class="chat-modal-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="chat-header-avatar">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+        </div>
+        <div>
+          <div style="font-weight: 700; font-size: 14px;">Medika Care Assistant</div>
+          <div style="font-size: 11px; opacity: 0.85; display: flex; align-items: center; gap: 4px;">
+            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #22C55E;"></span>
+            Online • RS Bahagia Medika Jakarta
+          </div>
+        </div>
+      </div>
+      <button id="closeChatModalBtn" class="chat-close-btn" title="Tutup Chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="chat-messages-body" id="chatMessagesBody">
+      <!-- Initial message -->
+      <div class="chat-msg-row bot">
+        <div class="chat-bubble bot">
+          Halo, ada yang bisa saya bantu? Saya Medika Care, asisten virtual RS Bahagia Medika Jakarta.
+        </div>
+        <div class="chat-quick-replies">
+          <button class="chat-qr-btn" onclick="handleChatOption('Cari Dokter')">Cari Dokter</button>
+          <button class="chat-qr-btn" onclick="handleChatOption('Cari Layanan')">Cari Layanan</button>
+          <button class="chat-qr-btn" onclick="handleChatOption('Buat Janji')">Buat Janji</button>
+          <button class="chat-qr-btn" onclick="handleChatOption('Hubungi Customer Service')">Hubungi Customer Service</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" id="chatTextInput" placeholder="Ketik pertanyaan atau kebutuhan Anda..." />
+      <button id="chatSendBtn" class="chat-send-btn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

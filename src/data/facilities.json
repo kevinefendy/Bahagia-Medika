@@ -1,0 +1,134 @@
+[
+  {
+    "id": "fac-001",
+    "name": "Ruang Rawat Inap VIP & VVIP Suite",
+    "category": "Rawat Inap",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Kamar rawat inap kelas VIP & VVIP dirancang dengan privasi tinggi, tempat tidur elektrik multi-posisi, sofa pendamping keluarga, AC sentral, TV Smart 50 inch, kulkas, dispenser, kamar mandi privat air hangat, serta sistem bel darurat terintegrasi ke nurse station 24 jam."
+  },
+  {
+    "id": "fac-002",
+    "name": "Ruang Operasi Modern & Laparoskopi",
+    "category": "Tindakan Medis",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Kamar bedah terstandarisasi internasional dengan sistem tata udara tekanan positif dan filter HEPA ultra-steril. Dilengkapi tower laparoskopi 4K untuk bedah invasif minimal, lampu operasi LED shadowless, dan mesin anestesi modern dengan monitor tanda vital real-time."
+  },
+  {
+    "id": "fac-003",
+    "name": "Instalasi Gawat Darurat (IGD 24 Jam)",
+    "category": "Gawat Darurat",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Pusat penanganan kegawatdaruratan dan trauma siaga 24 jam dengan zona triage merah, kuning, dan hijau. Memiliki ruang resusitasi kritis, mobile X-Ray cito, ventilator darurat, serta tim dokter jaga bersertifikasi ATLS dan ACLS."
+  },
+  {
+    "id": "fac-004",
+    "name": "Pusat Radiologi & CT-Scan Multi-Slice",
+    "category": "Diagnostik",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Fasilitas pencitraan medis berteknologi mutakhir dengan 128-Slice CT-Scan berdosis radiasi rendah, USG 4D Live Doppler, X-Ray Digital panoramik, dan densitometri tulang (BMD) untuk penegakan diagnosis akurat dan presisi tinggi."
+  },
+  {
+    "id": "fac-005",
+    "name": "Laboratorium Patologi & Analisis Darah 24 Jam",
+    "category": "Diagnostik",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Laboratorium diagnostik otomatis terkalibrasi nasional dengan kemampuan pemeriksaan hematologi, kimia darah, penanda tumor, imunologi, dan mikrobiologi dengan waktu tunggu cepat (cito < 45 menit) yang langsung terhubung ke rekam medis pasien."
+  },
+  {
+    "id": "fac-006",
+    "name": "Unit Perawatan Intensif (ICU, NICU & PICU)",
+    "category": "Rawat Kritis",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Unit perawatan intensif komprehensif bagi pasien dewasa (ICU), bayi baru lahir prematur atau kritis (NICU), dan anak-anak (PICU). Didukung ventilator canggih, monitor invasif hemodinamik, inkubator tertutup, dan rasio perawat 1:1."
+  },
+  {
+    "id": "fac-007",
+    "name": "Klinik Rawat Jalan & 18 Poliklinik Spesialis",
+    "category": "Rawat Jalan",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Ruang tunggu poliklinik yang lapang, sejuk, dan higienis dengan sistem pemanggilan antrean digital terintegrasi. Mencakup 18 poliklinik spesialis lengkap dari penyakit dalam, anak, bedah, jantung, kebidanan, hingga kesehatan jiwa."
+  },
+  {
+    "id": "fac-008",
+    "name": "Kamar Bersalin & Maternity Suite",
+    "category": "Ibu & Anak",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Ruang bersalin privat dan nyaman bernuansa hangat (homey) dengan tempat tidur persalinan ergonomis, fasilitas Inisiasi Menyusu Dini (IMD), cardiotocography (CTG) pengawas detak jantung janin, serta dokter spesialis obgyn dan bidan siaga penuh."
+  },
+  {
+    "id": "fac-009",
+    "name": "Ruang Fisioterapi & Rehabilitasi Medis",
+    "category": "Rehabilitasi",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1584515933487-779824d29309?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Pusat pemulihan fungsi gerak dan terapi fisik dengan alat modalitas elektroterapi, ultrasound therapy, treadmill rehabilitasi terarah, paralel bar, dan didampingi tim fisioterapis profesional untuk pemulihan pasca-stroke maupun pasca-operasi ortopedi."
+  },
+  {
+    "id": "fac-010",
+    "name": "Instalasi Farmasi & Apotek 24 Jam",
+    "category": "Penunjang Medis",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Apotek rumah sakit dengan jaminan 100% obat asli bersertifikasi BPOM, manajemen cold-chain untuk insulin & vaksin, serta pelayanan resep dokter rawat inap dan rawat jalan dengan konseling edukasi obat oleh apoteker berlisensi."
+  },
+  {
+    "id": "fac-011",
+    "name": "Armada Ambulans Siaga & Evakuasi Medis",
+    "category": "Gawat Darurat",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Armada ambulans emergensi tipe transfer dan ICU bergerak (mobile ICU) yang dilengkapi tabung oksigen sentral, defibrilator portabel, monitor jantung, suction, dan tim paramedis berpengalaman untuk penjemputan darurat pasien di seluruh Jabodetabek."
+  },
+  {
+    "id": "fac-012",
+    "name": "Area Parkir Luas & Drop-Off Lobi Utama",
+    "category": "Fasilitas Umum",
+    "imageUrls": [
+      "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&auto=format&fit=crop&q=80"
+    ],
+    "description": "Kawasan lobi drop-off yang bebas hambatan dan ramah kursi roda (wheelchair-friendly). Dilengkapi kantong parkir bertingkat yang tertata aman dengan pengawasan CCTV 24 jam dan pos valet bagi kenyamanan pasien serta keluarga."
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "art-001", "slug": "tips-menjaga-kesehatan-jantung",
+    "title": "Tips Menjaga Kesehatan Jantung",
+    "category": "Kesehatan",
+    "author": "Dr. Dewi Anggraini, Sp.JP",
+    "publishedAt": "2026-08-15",
+    "featuredImage": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&h=400&fit=crop",
+    "content": "Menjaga kesehatan jantung adalah investasi jangka panjang untuk kualitas hidup yang lebih baik. Berikut tips sederhana yang dapat Anda lakukan sehari-hari.\n\n1. Berolahraga secara rutin minimal 30 menit setiap hari. Olahraga aerobik seperti berjalan cepat, berenang, atau bersepeda dapat memperkuat jantung.\n\n2. Perhatikan pola makan. Kurangi konsumsi makanan tinggi lemak jenuh dan garam. Perbanyak konsumsi sayuran, buah-buahan, dan ikan.\n\n3. Kontrol berat badan. Kelebihan berat badan meningkatkan risiko penyakit jantung.\n\n4. Hindari merokok. Merokok merusak dinding pembuluh darah dan meningkatkan risiko aterosklerosis.\n\n5. Kelola stres dengan baik. Stres kronis dapat meningkatkan tekanan darah dan merusak jantung.\n\n6. Periksa kesehatan secara berkala, termasuk tekanan darah, kolesterol, dan gula darah.",
+    "relatedArticleIds": ["art-002", "art-003"],
+    "isPublished": true
+  },
+  {
+    "id": "art-002", "slug": "panduan-nutrisi-anak",
+    "title": "Panduan Nutrisi untuk Anak",
+    "category": "Anak",
+    "author": "Dr. Amelia Putri, Sp.An",
+    "publishedAt": "2026-09-01",
+    "featuredImage": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&auto=format&fit=crop&q=80",
+    "content": "Masa pertumbuhan adalah waktu yang tepat untuk membangun fondasi kesehatan jangka panjang. Nutrisi yang adequate akan mendukung pertumbuhan fisik dan perkembangan kognitif anak.\n\nUntuk anak usia 1-5 tahun, pastikan mereka mendapatkan:\n\n1. Karbohidrat dari sumber sehat seperti nasi, roti gandum, dan kentang.\n2. Protein dari daging, ikan, telur, dan kacang-kacangan.\n3. Lemak sehat dari alpukat, kacang-kacangan, dan ikan berlemak.\n4. Vitamin dan mineral dari sayuran dan buah-buahan berwarna.\n5. Kalsium dari susu, yogurt, dan keju untuk pertumbuhan tulang.\n\nHindari memberikan makanan tinggi gula, garam, dan lemak jenuh. Batasi camilan olahan dan minuman manis.",
+    "relatedArticleIds": ["art-001", "art-004"],
+    "isPublished": true
+  },
+  {
+    "id": "art-003", "slug": "mengenal-gejala-diabetes",
+    "title": "Mengenal Gejala Diabetes Sejak Dini",
+    "category": "Kesehatan",
+    "author": "Dr. Putri Sari, Sp.PD",
+    "publishedAt": "2026-08-20",
+    "featuredImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&h=400&fit=crop",
+    "content": "Diabetes mellitus adalah kondisi kronis yang mempengaruhi cara tubuh memproses gula darah. Mengenal gejala sejak dini sangat penting untuk penanganan yang efektif.\n\nGejala umum diabetes meliputi:\n1. Sering merasa haus dan buang air kecil.\n2. Penurunan berat badan tanpa sebab yang jelas.\n3. Kelelahan yang berkepanjangan.\n4. Penglihatan kabur.\n5. Luka yang lambat sembuh.\n6. Kesemutan atau baal pada tangan dan kaki.\n\nJika Anda mengalami gejala-gejala tersebut, segera konsultasikan dengan dokter untuk pemeriksaan gula darah.",
+    "relatedArticleIds": ["art-001", "art-005"],
+    "isPublished": true
+  },
+  {
+    "id": "art-004", "slug": "pentingnya-vaksinasi-anak",
+    "title": "Pentingnya Vaksinasi untuk Anak",
+    "category": "Anak",
+    "author": "Dr. Bagus Santoso, Sp.An",
+    "publishedAt": "2026-09-05",
+    "featuredImage": "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=800&h=400&fit=crop",
+    "content": "Vaksinasi adalah salah satu cara paling efektif untuk melindungi anak dari berbagai penyakit berbahaya. Vaksin bekerja dengan merangsang sistem imun tubuh untuk mengenali dan melawan infeksi.\n\nJadwal vaksinasi dasar yang direkomendasikan:\n- Usia 0-2 bulan: Hepatitis B, BCG\n- Usia 2-4 bulan: DPT, Polio, Hib\n- Usia 6-9 bulan: MR, Campak\n\nPastikan anak mendapatkan vaksinasi sesuai jadwal yang ditentukan oleh dokter. Vaksinasi tidak hanya melindungi anak Anda, tetapi juga komunitas di sekitarnya.",
+    "relatedArticleIds": ["art-002", "art-005"],
+    "isPublished": true
+  },
+  {
+    "id": "art-005", "slug": "stres-dan-kesehatan-mental",
+    "title": "Mengelola Stres untuk Kesehatan Mental",
+    "category": "Mental Health",
+    "author": "Dr. Maya Kusuma, Sp.S",
+    "publishedAt": "2026-08-28",
+    "featuredImage": "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&h=400&fit=crop",
+    "content": "Stres adalah respons alami tubuh terhadap tantangan atau tuntutan. Namun, stres kronis dapat berdampak negatif pada kesehatan fisik dan mental.\n\nCara mengelola stres:\n1. Meditasi dan pernapasan dalam\n2. Olahraga teratur\n3. Tidur yang cukup (7-9 jam per hari)\n4. Berbicara dengan orang terdekat\n5. Menulis jurnal\n6. Mengatur waktu dengan baik\n\nJika stres sudah mengganggu aktivitas sehari-hari, jangan ragu untuk berkonsultasi dengan profesional kesehatan mental.",
+    "relatedArticleIds": ["art-001", "art-003"],
+    "isPublished": true
+  },
+  {
+    "id": "art-006", "slug": "pola-makan-sehat-jantung",
+    "title": "Pola Makan Sehat untuk Jantung",
+    "category": "Gaya Hidup",
+    "author": "Dr. Dewi Anggraini, Sp.JP",
+    "publishedAt": "2026-09-10",
+    "featuredImage": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop",
+    "content": "Pola makan yang sehat memainkan peran penting dalam menjaga kesehatan jantung dan pembuluh darah. Berikut panduan pola makan yang direkomendasikan:\n\n1. Perbanyak konsumsi sayuran dan buah-buahan (minimal 5 porsi per hari)\n2. Pilih sumber karbohidrat kompleks seperti nasi merah, oat, dan gandum\n3. Konsumsi ikan minimal 2 kali seminggu\n4. Batasi garam maksimal 5 gram per hari\n5. Hindari makanan olahan dan makanan cepat saji\n6. Minum air putih minimal 8 gelas per hari\n\nDengan menerapkan pola makan sehat, risiko penyakit jantung dapat berkurang hingga 30%.",
+    "relatedArticleIds": ["art-001", "art-003"],
+    "isPublished": true
+  }
+]

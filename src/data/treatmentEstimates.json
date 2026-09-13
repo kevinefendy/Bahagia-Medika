@@ -1,0 +1,77 @@
+[
+  {
+    "id": "proc-001",
+    "name": "Persalinan Sesar ERACS",
+    "category": "Kebidanan & Kandungan",
+    "description": "Metode operasi sesar dengan pemulihan cepat (Enhanced Recovery After Cesarean Surgery), mobilisasi dini 2 jam pasca-operasi dan minim nyeri.",
+    "lengthOfStay": "3 Hari 2 Malam",
+    "bpjsCovered": true,
+    "bpjsNote": "Ditanggung penuh BPJS Kesehatan sesuai indikasi medis darurat/rujukan faskes tingkat 1.",
+    "packages": {
+      "vvip": { "room": "VVIP Suite", "total": 29500000, "breakdown": { "doctor": 14000000, "room": 5000000, "meds": 8500000, "admin": 2000000 } },
+      "vip": { "room": "VIP Deluxe", "total": 22500000, "breakdown": { "doctor": 11000000, "room": 2900000, "meds": 7100000, "admin": 1500000 } },
+      "kelas1": { "room": "Kelas 1", "total": 16800000, "breakdown": { "doctor": 8500000, "room": 1500000, "meds": 5600000, "admin": 1200000 } },
+      "kelas2": { "room": "Kelas 2", "total": 12500000, "breakdown": { "doctor": 6500000, "room": 900000, "meds": 4200000, "admin": 900000 } }
+    }
+  },
+  {
+    "id": "proc-002",
+    "name": "Persalinan Normal Pervaginam",
+    "category": "Kebidanan & Kandungan",
+    "description": "Proses melahirkan alami didampingi dokter spesialis kandungan (obgyn), bidan terlatih, fasilitas Inisiasi Menyusu Dini (IMD), dan kamar bayi.",
+    "lengthOfStay": "2 Hari 1 Malam",
+    "bpjsCovered": true,
+    "bpjsNote": "Ditanggung BPJS Kesehatan di FKTP atau faskes rujukan sesuai indikasi.",
+    "packages": {
+      "vvip": { "room": "VVIP Suite", "total": 14500000, "breakdown": { "doctor": 7000000, "room": 2500000, "meds": 3800000, "admin": 1200000 } },
+      "vip": { "room": "VIP Deluxe", "total": 10500000, "breakdown": { "doctor": 5500000, "room": 1450000, "meds": 2750000, "admin": 800000 } },
+      "kelas1": { "room": "Kelas 1", "total": 7800000, "breakdown": { "doctor": 4200000, "room": 750000, "meds": 2250000, "admin": 600000 } },
+      "kelas2": { "room": "Kelas 2", "total": 5500000, "breakdown": { "doctor": 3000000, "room": 450000, "meds": 1600000, "admin": 450000 } }
+    }
+  },
+  {
+    "id": "proc-003",
+    "name": "Operasi Laparoskopi Usus Buntu",
+    "category": "Bedah Umum Minimal Invasif",
+    "description": "Pengangkatan apendisitis menggunakan kamera mikro 4K dan instrumen berdiameter 5 mm. Sayatan kecil, minim bekas luka, dan masa rawat lebih singkat.",
+    "lengthOfStay": "2 Hari 1 Malam",
+    "bpjsCovered": true,
+    "bpjsNote": "Ditanggung BPJS Kesehatan sebagai tindakan bedah emergensi/elektif rujukan.",
+    "packages": {
+      "vvip": { "room": "VVIP Suite", "total": 24000000, "breakdown": { "doctor": 11500000, "room": 2500000, "meds": 8500000, "admin": 1500000 } },
+      "vip": { "room": "VIP Deluxe", "total": 18500000, "breakdown": { "doctor": 9000000, "room": 1450000, "meds": 6850000, "admin": 1200000 } },
+      "kelas1": { "room": "Kelas 1", "total": 14000000, "breakdown": { "doctor": 7000000, "room": 750000, "meds": 5350000, "admin": 900000 } },
+      "kelas2": { "room": "Kelas 2", "total": 10500000, "breakdown": { "doctor": 5500000, "room": 450000, "meds": 3850000, "admin": 700000 } }
+    }
+  },
+  {
+    "id": "proc-004",
+    "name": "Operasi Katarak Phacoemulsifikasi",
+    "category": "Mata & Bedah Refraktif",
+    "description": "Penghancuran katarak dengan getaran ultrasonik mikro dan pemasangan lensa tanam lipat (IOL) tanpa perlu jahitan mata.",
+    "lengthOfStay": "One Day Care (Tanpa Menginap)",
+    "bpjsCovered": true,
+    "bpjsNote": "Ditanggung penuh BPJS Kesehatan termasuk lensa IOL standar.",
+    "packages": {
+      "vvip": { "room": "Day Care VVIP", "total": 14500000, "breakdown": { "doctor": 7500000, "room": 1500000, "meds": 4500000, "admin": 1000000 } },
+      "vip": { "room": "Day Care VIP", "total": 11500000, "breakdown": { "doctor": 6000000, "room": 1000000, "meds": 3700000, "admin": 800000 } },
+      "kelas1": { "room": "Day Care Reguler", "total": 8500000, "breakdown": { "doctor": 4500000, "room": 600000, "meds": 2800000, "admin": 600000 } },
+      "kelas2": { "room": "Day Care Reguler", "total": 6500000, "breakdown": { "doctor": 3500000, "room": 400000, "meds": 2100000, "admin": 500000 } }
+    }
+  },
+  {
+    "id": "proc-005",
+    "name": "Rawat Inap Demam Berdarah (DBD) / Tifoid",
+    "category": "Penyakit Dalam",
+    "description": "Perawatan terapi cairan intravena, pemantauan trombosit & hematokrit serial 24 jam, serta konsultasi dokter spesialis penyakit dalam.",
+    "lengthOfStay": "4 Hari 3 Malam",
+    "bpjsCovered": true,
+    "bpjsNote": "Ditanggung penuh BPJS Kesehatan sesuai hak kelas kepesertaan.",
+    "packages": {
+      "vvip": { "room": "VVIP Suite", "total": 16500000, "breakdown": { "doctor": 4000000, "room": 7500000, "meds": 3800000, "admin": 1200000 } },
+      "vip": { "room": "VIP Deluxe", "total": 10800000, "breakdown": { "doctor": 3200000, "room": 4350000, "meds": 2450000, "admin": 800000 } },
+      "kelas1": { "room": "Kelas 1", "total": 6800000, "breakdown": { "doctor": 2400000, "room": 2250000, "meds": 1650000, "admin": 500000 } },
+      "kelas2": { "room": "Kelas 2", "total": 4800000, "breakdown": { "doctor": 1800000, "room": 1350000, "meds": 1250000, "admin": 400000 } }
+    }
+  }
+]

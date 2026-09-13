@@ -1,0 +1,12 @@
+[
+  { "id": "sp-001", "name": "Anak", "icon": "baby" },
+  { "id": "sp-002", "name": "Jantung", "icon": "heart-pulse" },
+  { "id": "sp-003", "name": "Kandungan", "icon": "heart-handshake" },
+  { "id": "sp-004", "name": "Kulit & Kelamin", "icon": "scan-face" },
+  { "id": "sp-005", "name": "Mata", "icon": "eye" },
+  { "id": "sp-006", "name": "Gigi & Mulut", "icon": "smile" },
+  { "id": "sp-007", "name": "THT", "icon": "ear" },
+  { "id": "sp-008", "name": "Syaraf", "icon": "brain" },
+  { "id": "sp-009", "name": "Ortopedi", "icon": "bone" },
+  { "id": "sp-010", "name": "Umum", "icon": "stethoscope" }
+]
