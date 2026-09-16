@@ -6,7 +6,7 @@
 
 ## Tentang Proyek
 
-**RS Bahagia Medika** adalah website rumah sakit berbasis Next.js yang dirancang untuk memberikan pengalaman digital yang profesional dan humanis. Website ini menggabungkan informasi publik rumah sakit, sistem pemesanan janji dokter online, portal pasien, dan panel manajemen admin dalam satu platform terpadu.
+**RS Bahagia Medika** adalah website rumah sakit berbasis Next.js yang dirancang untuk memberikan pengalaman digital yang profesional dan humanis. Website ini menggabungkan informasi publik rumah sakit, sistem pemesanan janji dokter online, portal pasien, dan panel manajemen admin dalam satu platform terpadu ahli.
 
 Dibangun dengan pendekatan **mobile-first**, **fully responsive**, dan tanpa satu emoji pun — semua ikon menggunakan Lucide SVG untuk konsistensi visual yang bersih.
 
